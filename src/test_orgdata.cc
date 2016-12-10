@@ -12,7 +12,7 @@ int main()
 	dat.init("/mnt/hgfs/0.TEATDATA/GreenValley/test4/da.flam");
 	
 	MapPoints mps;
-	mps.InPutDataFast("/mnt/hgfs/0.TEATDATA/GreenValley/test4/da.odm", "/mnt/hgfs/0.TEATDATA/GreenValley/test4/da.flam");
+	mps.InPutDataFast("/mnt/hgfs/0.TEATDATA/GreenValley/test4/reall.odm", "/mnt/hgfs/0.TEATDATA/GreenValley/test4/da.flam");
 	
 	
 	

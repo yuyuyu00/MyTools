@@ -173,6 +173,9 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Value Computed by CMake
 MyTools_BINARY_DIR:STATIC=/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build
 
+//Dependencies for target
+MyTools_LIB_DEPENDS:STATIC=
+
 //Value Computed by CMake
 MyTools_SOURCE_DIR:STATIC=/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools
 

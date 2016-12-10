@@ -143,6 +143,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named MyTools
+
+# Build rule for target.
+MyTools: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MyTools
+.PHONY : MyTools
+
+# fast build rule for target.
+MyTools/fast:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/build
+.PHONY : MyTools/fast
+
+#=============================================================================
 # Target rules for targets named tst1
 
 # Build rule for target.
@@ -155,149 +168,167 @@ tst1/fast:
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/build
 .PHONY : tst1/fast
 
-CommonFun.o: CommonFun.cpp.o
-.PHONY : CommonFun.o
+src/CommonFun.o: src/CommonFun.cpp.o
+.PHONY : src/CommonFun.o
 
 # target to build an object file
-CommonFun.cpp.o:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/CommonFun.cpp.o
-.PHONY : CommonFun.cpp.o
+src/CommonFun.cpp.o:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/CommonFun.cpp.o
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/CommonFun.cpp.o
+.PHONY : src/CommonFun.cpp.o
 
-CommonFun.i: CommonFun.cpp.i
-.PHONY : CommonFun.i
+src/CommonFun.i: src/CommonFun.cpp.i
+.PHONY : src/CommonFun.i
 
 # target to preprocess a source file
-CommonFun.cpp.i:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/CommonFun.cpp.i
-.PHONY : CommonFun.cpp.i
+src/CommonFun.cpp.i:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/CommonFun.cpp.i
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/CommonFun.cpp.i
+.PHONY : src/CommonFun.cpp.i
 
-CommonFun.s: CommonFun.cpp.s
-.PHONY : CommonFun.s
+src/CommonFun.s: src/CommonFun.cpp.s
+.PHONY : src/CommonFun.s
 
 # target to generate assembly for a file
-CommonFun.cpp.s:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/CommonFun.cpp.s
-.PHONY : CommonFun.cpp.s
+src/CommonFun.cpp.s:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/CommonFun.cpp.s
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/CommonFun.cpp.s
+.PHONY : src/CommonFun.cpp.s
 
-DrawPoint2D.o: DrawPoint2D.cpp.o
-.PHONY : DrawPoint2D.o
+src/DrawPoint2D.o: src/DrawPoint2D.cpp.o
+.PHONY : src/DrawPoint2D.o
 
 # target to build an object file
-DrawPoint2D.cpp.o:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/DrawPoint2D.cpp.o
-.PHONY : DrawPoint2D.cpp.o
+src/DrawPoint2D.cpp.o:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/DrawPoint2D.cpp.o
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/DrawPoint2D.cpp.o
+.PHONY : src/DrawPoint2D.cpp.o
 
-DrawPoint2D.i: DrawPoint2D.cpp.i
-.PHONY : DrawPoint2D.i
+src/DrawPoint2D.i: src/DrawPoint2D.cpp.i
+.PHONY : src/DrawPoint2D.i
 
 # target to preprocess a source file
-DrawPoint2D.cpp.i:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/DrawPoint2D.cpp.i
-.PHONY : DrawPoint2D.cpp.i
+src/DrawPoint2D.cpp.i:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/DrawPoint2D.cpp.i
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/DrawPoint2D.cpp.i
+.PHONY : src/DrawPoint2D.cpp.i
 
-DrawPoint2D.s: DrawPoint2D.cpp.s
-.PHONY : DrawPoint2D.s
+src/DrawPoint2D.s: src/DrawPoint2D.cpp.s
+.PHONY : src/DrawPoint2D.s
 
 # target to generate assembly for a file
-DrawPoint2D.cpp.s:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/DrawPoint2D.cpp.s
-.PHONY : DrawPoint2D.cpp.s
+src/DrawPoint2D.cpp.s:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/DrawPoint2D.cpp.s
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/DrawPoint2D.cpp.s
+.PHONY : src/DrawPoint2D.cpp.s
 
-MapPoint2D.o: MapPoint2D.cpp.o
-.PHONY : MapPoint2D.o
+src/MapPoint2D.o: src/MapPoint2D.cpp.o
+.PHONY : src/MapPoint2D.o
 
 # target to build an object file
-MapPoint2D.cpp.o:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/MapPoint2D.cpp.o
-.PHONY : MapPoint2D.cpp.o
+src/MapPoint2D.cpp.o:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/MapPoint2D.cpp.o
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/MapPoint2D.cpp.o
+.PHONY : src/MapPoint2D.cpp.o
 
-MapPoint2D.i: MapPoint2D.cpp.i
-.PHONY : MapPoint2D.i
+src/MapPoint2D.i: src/MapPoint2D.cpp.i
+.PHONY : src/MapPoint2D.i
 
 # target to preprocess a source file
-MapPoint2D.cpp.i:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/MapPoint2D.cpp.i
-.PHONY : MapPoint2D.cpp.i
+src/MapPoint2D.cpp.i:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/MapPoint2D.cpp.i
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/MapPoint2D.cpp.i
+.PHONY : src/MapPoint2D.cpp.i
 
-MapPoint2D.s: MapPoint2D.cpp.s
-.PHONY : MapPoint2D.s
+src/MapPoint2D.s: src/MapPoint2D.cpp.s
+.PHONY : src/MapPoint2D.s
 
 # target to generate assembly for a file
-MapPoint2D.cpp.s:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/MapPoint2D.cpp.s
-.PHONY : MapPoint2D.cpp.s
+src/MapPoint2D.cpp.s:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/MapPoint2D.cpp.s
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/MapPoint2D.cpp.s
+.PHONY : src/MapPoint2D.cpp.s
 
-Point2dData.o: Point2dData.cpp.o
-.PHONY : Point2dData.o
+src/Point2dData.o: src/Point2dData.cpp.o
+.PHONY : src/Point2dData.o
 
 # target to build an object file
-Point2dData.cpp.o:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/Point2dData.cpp.o
-.PHONY : Point2dData.cpp.o
+src/Point2dData.cpp.o:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/Point2dData.cpp.o
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/Point2dData.cpp.o
+.PHONY : src/Point2dData.cpp.o
 
-Point2dData.i: Point2dData.cpp.i
-.PHONY : Point2dData.i
+src/Point2dData.i: src/Point2dData.cpp.i
+.PHONY : src/Point2dData.i
 
 # target to preprocess a source file
-Point2dData.cpp.i:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/Point2dData.cpp.i
-.PHONY : Point2dData.cpp.i
+src/Point2dData.cpp.i:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/Point2dData.cpp.i
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/Point2dData.cpp.i
+.PHONY : src/Point2dData.cpp.i
 
-Point2dData.s: Point2dData.cpp.s
-.PHONY : Point2dData.s
+src/Point2dData.s: src/Point2dData.cpp.s
+.PHONY : src/Point2dData.s
 
 # target to generate assembly for a file
-Point2dData.cpp.s:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/Point2dData.cpp.s
-.PHONY : Point2dData.cpp.s
+src/Point2dData.cpp.s:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/Point2dData.cpp.s
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/Point2dData.cpp.s
+.PHONY : src/Point2dData.cpp.s
 
-Point3dData.o: Point3dData.cpp.o
-.PHONY : Point3dData.o
+src/Point3dData.o: src/Point3dData.cpp.o
+.PHONY : src/Point3dData.o
 
 # target to build an object file
-Point3dData.cpp.o:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/Point3dData.cpp.o
-.PHONY : Point3dData.cpp.o
+src/Point3dData.cpp.o:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/Point3dData.cpp.o
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/Point3dData.cpp.o
+.PHONY : src/Point3dData.cpp.o
 
-Point3dData.i: Point3dData.cpp.i
-.PHONY : Point3dData.i
+src/Point3dData.i: src/Point3dData.cpp.i
+.PHONY : src/Point3dData.i
 
 # target to preprocess a source file
-Point3dData.cpp.i:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/Point3dData.cpp.i
-.PHONY : Point3dData.cpp.i
+src/Point3dData.cpp.i:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/Point3dData.cpp.i
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/Point3dData.cpp.i
+.PHONY : src/Point3dData.cpp.i
 
-Point3dData.s: Point3dData.cpp.s
-.PHONY : Point3dData.s
+src/Point3dData.s: src/Point3dData.cpp.s
+.PHONY : src/Point3dData.s
 
 # target to generate assembly for a file
-Point3dData.cpp.s:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/Point3dData.cpp.s
-.PHONY : Point3dData.cpp.s
+src/Point3dData.cpp.s:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/Point3dData.cpp.s
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/Point3dData.cpp.s
+.PHONY : src/Point3dData.cpp.s
 
-test_orgdata.o: test_orgdata.cc.o
-.PHONY : test_orgdata.o
+src/test_orgdata.o: src/test_orgdata.cc.o
+.PHONY : src/test_orgdata.o
 
 # target to build an object file
-test_orgdata.cc.o:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/test_orgdata.cc.o
-.PHONY : test_orgdata.cc.o
+src/test_orgdata.cc.o:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/test_orgdata.cc.o
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/test_orgdata.cc.o
+.PHONY : src/test_orgdata.cc.o
 
-test_orgdata.i: test_orgdata.cc.i
-.PHONY : test_orgdata.i
+src/test_orgdata.i: src/test_orgdata.cc.i
+.PHONY : src/test_orgdata.i
 
 # target to preprocess a source file
-test_orgdata.cc.i:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/test_orgdata.cc.i
-.PHONY : test_orgdata.cc.i
+src/test_orgdata.cc.i:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/test_orgdata.cc.i
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/test_orgdata.cc.i
+.PHONY : src/test_orgdata.cc.i
 
-test_orgdata.s: test_orgdata.cc.s
-.PHONY : test_orgdata.s
+src/test_orgdata.s: src/test_orgdata.cc.s
+.PHONY : src/test_orgdata.s
 
 # target to generate assembly for a file
-test_orgdata.cc.s:
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/test_orgdata.cc.s
-.PHONY : test_orgdata.cc.s
+src/test_orgdata.cc.s:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/test_orgdata.cc.s
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/test_orgdata.cc.s
+.PHONY : src/test_orgdata.cc.s
 
 # Help Target
 help:
@@ -305,6 +336,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... MyTools"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
@@ -312,24 +344,24 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... tst1"
-	@echo "... CommonFun.o"
-	@echo "... CommonFun.i"
-	@echo "... CommonFun.s"
-	@echo "... DrawPoint2D.o"
-	@echo "... DrawPoint2D.i"
-	@echo "... DrawPoint2D.s"
-	@echo "... MapPoint2D.o"
-	@echo "... MapPoint2D.i"
-	@echo "... MapPoint2D.s"
-	@echo "... Point2dData.o"
-	@echo "... Point2dData.i"
-	@echo "... Point2dData.s"
-	@echo "... Point3dData.o"
-	@echo "... Point3dData.i"
-	@echo "... Point3dData.s"
-	@echo "... test_orgdata.o"
-	@echo "... test_orgdata.i"
-	@echo "... test_orgdata.s"
+	@echo "... src/CommonFun.o"
+	@echo "... src/CommonFun.i"
+	@echo "... src/CommonFun.s"
+	@echo "... src/DrawPoint2D.o"
+	@echo "... src/DrawPoint2D.i"
+	@echo "... src/DrawPoint2D.s"
+	@echo "... src/MapPoint2D.o"
+	@echo "... src/MapPoint2D.i"
+	@echo "... src/MapPoint2D.s"
+	@echo "... src/Point2dData.o"
+	@echo "... src/Point2dData.i"
+	@echo "... src/Point2dData.s"
+	@echo "... src/Point3dData.o"
+	@echo "... src/Point3dData.i"
+	@echo "... src/Point3dData.s"
+	@echo "... src/test_orgdata.o"
+	@echo "... src/test_orgdata.i"
+	@echo "... src/test_orgdata.s"
 .PHONY : help
 
 

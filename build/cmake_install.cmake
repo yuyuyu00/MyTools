@@ -50,6 +50,24 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   ENDIF()
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/libMyTools.a")
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/MyTools" TYPE FILE FILES
+    "/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/Point2dData.h"
+    "/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/CommonFun.h"
+    "/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/Point3dData.h"
+    "/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/DrawPoint2D.h"
+    "/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/MapPoint2D.h"
+    )
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/MyTools" TYPE FILE FILES "/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles/MyToolsConfig.cmake")
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+
 IF(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 ELSE(CMAKE_INSTALL_COMPONENT)
