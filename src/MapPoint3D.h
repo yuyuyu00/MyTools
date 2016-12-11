@@ -13,28 +13,38 @@ namespace My
 	namespace map3d
 	{
 		
+		
 		typedef  pcl::PointXYZ PointType3D;
 
-		
-		
+
 		class MapPoint3D: public pcl::PointCloud<pcl::PointXYZ>
 		{
 		public:
-			bool ReadXYZ(char* path,int type=0);
+			MapPoint3D();
+			~MapPoint3D();
+			MapPoint3D(const MapPoint3D& p);
 			
+			
+			bool ReadXYZ(const char* path,int type=0);
 			
 			
 		public:
-			vector<PointType3D> m_pts;
 			
 			int m_filetype;
 		};
 		
+
+		
 		class MapPoints3D
 		{
 		public:
+			
+			~MapPoints3D();
+			
+			
 			bool Show();
 			
+			bool SetOnePatch(MapPoint3D& mp);
 			
 			
 			

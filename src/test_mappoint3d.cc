@@ -1,5 +1,7 @@
 /* \author Geoffrey Biggs */
 #include <iostream>
+#include <fstream>
+#include <string>
 
 #include <boost/thread/thread.hpp>
 #include <pcl/common/common_headers.h>
@@ -55,15 +57,33 @@ boost::shared_ptr<pcl::visualization::PCLVisualizer> customColourVis (pcl::Point
 
 
 
-// --------------
-// -----Main-----
-// --------------
-int
-main (int argc, char** argv)
+
+int main (int argc, char** argv)
 {
-	// --------------------------------------
-	// -----Parse Command Line Arguments-----
-	// --------------------------------------
+	MapPoint3D pt;
+	fstream fd("/mnt/hgfs/E/data/cartodata/1.txt");
+	string tmp;
+	getline(fd,tmp);
+	string path = string("/mnt/hgfs/E/data/cartodata/re_pts1/")+tmp.substr(0,tmp.length()-1);;
+	
+	//fi.open(path);
+	cout<<path<<endl;
+	fstream fdd(path.c_str());/*"/mnt/hgfs/E/data/cartodata/re_pts1/laser635954624413020553.xyz");*/
+	if(!fdd)
+		cout<<"error open"<<endl;
+	fdd.close();
+	
+	pt.ReadXYZ(path.c_str());
+	
+// 	MapPoints3D mp;
+// 	mp.SetOnePatch(pt);
+// 	mp.Show();
+	
+	pcl::PointCloud<pcl::PointXYZ>* pointbase = dynamic_cast< pcl::PointCloud<pcl::PointXYZ>*>(&pt);
+	pcl::PointCloud<pcl::PointXYZ>::Ptr basic_cloud_ptr(pointbase);
+	
+	
+
 	if (pcl::console::find_argument (argc, argv, "-h") >= 0)
 	{
 		printUsage (argv[0]);
@@ -83,24 +103,24 @@ main (int argc, char** argv)
 		return 0;
 	}
 	
-	// ------------------------------------
-	// -----Create example point cloud-----
-	// ------------------------------------
-	pcl::PointCloud<pcl::PointXYZ>::Ptr basic_cloud_ptr (new pcl::PointCloud<pcl::PointXYZ>);
-	uint8_t r(255), g(15), b(15);
-	for (float z(-1.0); z <= 1.0; z += 0.05)
-	{
-		for (float angle(0.0); angle <= 360.0; angle += 5.0)
-		{
-			pcl::PointXYZ basic_point;
-			basic_point.x = 0.5 * cosf (pcl::deg2rad(angle));
-			basic_point.y = sinf (pcl::deg2rad(angle));
-			basic_point.z = z;
-			basic_cloud_ptr->points.push_back(basic_point);
-		}
-	}
-	basic_cloud_ptr->width = (int) basic_cloud_ptr->points.size ();
-	basic_cloud_ptr->height = 1;
+// 	// ------------------------------------
+// 	// -----Create example point cloud-----
+// 	// ------------------------------------
+// 	pcl::PointCloud<pcl::PointXYZ>::Ptr basic_cloud_ptr (new pcl::PointCloud<pcl::PointXYZ>);
+// 	uint8_t r(255), g(15), b(15);
+// 	for (float z(-1.0); z <= 1.0; z += 0.05)
+// 	{
+// 		for (float angle(0.0); angle <= 360.0; angle += 5.0)
+// 		{
+// 			pcl::PointXYZ basic_point;
+// 			basic_point.x = 0.5 * cosf (pcl::deg2rad(angle));
+// 			basic_point.y = sinf (pcl::deg2rad(angle));
+// 			basic_point.z = z;
+// 			basic_cloud_ptr->points.push_back(basic_point);
+// 		}
+// 	}
+// 	basic_cloud_ptr->width = (int) basic_cloud_ptr->points.size ();
+// 	basic_cloud_ptr->height = 1;
 	
 	boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer;
 

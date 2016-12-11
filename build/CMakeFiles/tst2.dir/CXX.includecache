@@ -6,18 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/CommonIO.h
-iostream
--
-string
--
-
-/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/MapPoint3D.cpp
-MapPoint3D.h
-/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/MapPoint3D.h
-CommonIO.h
-/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/CommonIO.h
-
 /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/MapPoint3D.h
 vector
 -
@@ -28,6 +16,10 @@ pcl/common/common_headers.h
 
 /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/test_mappoint3d.cc
 iostream
+-
+fstream
+-
+string
 -
 boost/thread/thread.hpp
 -
