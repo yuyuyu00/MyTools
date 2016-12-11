@@ -5,6 +5,7 @@
 #include <iostream>
 
 #include <pcl/common/common_headers.h>
+#include <pcl/visualization/pcl_visualizer.h>
 
 using namespace std;
 
@@ -29,7 +30,7 @@ namespace My
 			
 			
 		public:
-			
+			int m_id;
 			int m_filetype;
 		};
 		
@@ -39,20 +40,26 @@ namespace My
 		{
 		public:
 			
+			MapPoints3D();
 			~MapPoints3D();
 			
 			
 			bool Show();
 			
+			bool AddPointCloud(MapPoint3D* p);
+			
 			bool SetOnePatch(MapPoint3D& mp);
 			
 			
+		private:
+			bool initView();
 			
 		public:
 			vector<MapPoint3D*> m_mps;
 			
 			
 		private:
+			boost::shared_ptr<pcl::visualization::PCLVisualizer> m_viewer; //视图
 			
 		
 		};
