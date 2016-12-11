@@ -207,10 +207,7 @@ namespace My
 			//输入结束结点
 			int SetStopPatch();
 			
-			//读取文件至内存
-			char* GetFileBuf(const char* path);
 			
-			string BufGetLine(char* buf, int& index);
 			
 			vector<MapPoint*> ReadOdmfile(const char* odmpath);
 

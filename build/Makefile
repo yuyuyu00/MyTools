@@ -168,6 +168,19 @@ tst1/fast:
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/build
 .PHONY : tst1/fast
 
+#=============================================================================
+# Target rules for targets named tst2
+
+# Build rule for target.
+tst2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tst2
+.PHONY : tst2
+
+# fast build rule for target.
+tst2/fast:
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/build
+.PHONY : tst2/fast
+
 src/CommonFun.o: src/CommonFun.cpp.o
 .PHONY : src/CommonFun.o
 
@@ -175,6 +188,7 @@ src/CommonFun.o: src/CommonFun.cpp.o
 src/CommonFun.cpp.o:
 	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/CommonFun.cpp.o
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/CommonFun.cpp.o
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/CommonFun.cpp.o
 .PHONY : src/CommonFun.cpp.o
 
 src/CommonFun.i: src/CommonFun.cpp.i
@@ -184,6 +198,7 @@ src/CommonFun.i: src/CommonFun.cpp.i
 src/CommonFun.cpp.i:
 	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/CommonFun.cpp.i
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/CommonFun.cpp.i
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/CommonFun.cpp.i
 .PHONY : src/CommonFun.cpp.i
 
 src/CommonFun.s: src/CommonFun.cpp.s
@@ -193,7 +208,38 @@ src/CommonFun.s: src/CommonFun.cpp.s
 src/CommonFun.cpp.s:
 	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/CommonFun.cpp.s
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/CommonFun.cpp.s
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/CommonFun.cpp.s
 .PHONY : src/CommonFun.cpp.s
+
+src/CommonIO.o: src/CommonIO.cpp.o
+.PHONY : src/CommonIO.o
+
+# target to build an object file
+src/CommonIO.cpp.o:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/CommonIO.cpp.o
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/CommonIO.cpp.o
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/CommonIO.cpp.o
+.PHONY : src/CommonIO.cpp.o
+
+src/CommonIO.i: src/CommonIO.cpp.i
+.PHONY : src/CommonIO.i
+
+# target to preprocess a source file
+src/CommonIO.cpp.i:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/CommonIO.cpp.i
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/CommonIO.cpp.i
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/CommonIO.cpp.i
+.PHONY : src/CommonIO.cpp.i
+
+src/CommonIO.s: src/CommonIO.cpp.s
+.PHONY : src/CommonIO.s
+
+# target to generate assembly for a file
+src/CommonIO.cpp.s:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/CommonIO.cpp.s
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/CommonIO.cpp.s
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/CommonIO.cpp.s
+.PHONY : src/CommonIO.cpp.s
 
 src/DrawPoint2D.o: src/DrawPoint2D.cpp.o
 .PHONY : src/DrawPoint2D.o
@@ -202,6 +248,7 @@ src/DrawPoint2D.o: src/DrawPoint2D.cpp.o
 src/DrawPoint2D.cpp.o:
 	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/DrawPoint2D.cpp.o
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/DrawPoint2D.cpp.o
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/DrawPoint2D.cpp.o
 .PHONY : src/DrawPoint2D.cpp.o
 
 src/DrawPoint2D.i: src/DrawPoint2D.cpp.i
@@ -211,6 +258,7 @@ src/DrawPoint2D.i: src/DrawPoint2D.cpp.i
 src/DrawPoint2D.cpp.i:
 	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/DrawPoint2D.cpp.i
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/DrawPoint2D.cpp.i
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/DrawPoint2D.cpp.i
 .PHONY : src/DrawPoint2D.cpp.i
 
 src/DrawPoint2D.s: src/DrawPoint2D.cpp.s
@@ -220,6 +268,7 @@ src/DrawPoint2D.s: src/DrawPoint2D.cpp.s
 src/DrawPoint2D.cpp.s:
 	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/DrawPoint2D.cpp.s
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/DrawPoint2D.cpp.s
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/DrawPoint2D.cpp.s
 .PHONY : src/DrawPoint2D.cpp.s
 
 src/MapPoint2D.o: src/MapPoint2D.cpp.o
@@ -229,6 +278,7 @@ src/MapPoint2D.o: src/MapPoint2D.cpp.o
 src/MapPoint2D.cpp.o:
 	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/MapPoint2D.cpp.o
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/MapPoint2D.cpp.o
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/MapPoint2D.cpp.o
 .PHONY : src/MapPoint2D.cpp.o
 
 src/MapPoint2D.i: src/MapPoint2D.cpp.i
@@ -238,6 +288,7 @@ src/MapPoint2D.i: src/MapPoint2D.cpp.i
 src/MapPoint2D.cpp.i:
 	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/MapPoint2D.cpp.i
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/MapPoint2D.cpp.i
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/MapPoint2D.cpp.i
 .PHONY : src/MapPoint2D.cpp.i
 
 src/MapPoint2D.s: src/MapPoint2D.cpp.s
@@ -247,7 +298,38 @@ src/MapPoint2D.s: src/MapPoint2D.cpp.s
 src/MapPoint2D.cpp.s:
 	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/MapPoint2D.cpp.s
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/MapPoint2D.cpp.s
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/MapPoint2D.cpp.s
 .PHONY : src/MapPoint2D.cpp.s
+
+src/MapPoint3D.o: src/MapPoint3D.cpp.o
+.PHONY : src/MapPoint3D.o
+
+# target to build an object file
+src/MapPoint3D.cpp.o:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.o
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/MapPoint3D.cpp.o
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/MapPoint3D.cpp.o
+.PHONY : src/MapPoint3D.cpp.o
+
+src/MapPoint3D.i: src/MapPoint3D.cpp.i
+.PHONY : src/MapPoint3D.i
+
+# target to preprocess a source file
+src/MapPoint3D.cpp.i:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.i
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/MapPoint3D.cpp.i
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/MapPoint3D.cpp.i
+.PHONY : src/MapPoint3D.cpp.i
+
+src/MapPoint3D.s: src/MapPoint3D.cpp.s
+.PHONY : src/MapPoint3D.s
+
+# target to generate assembly for a file
+src/MapPoint3D.cpp.s:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.s
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/MapPoint3D.cpp.s
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/MapPoint3D.cpp.s
+.PHONY : src/MapPoint3D.cpp.s
 
 src/Point2dData.o: src/Point2dData.cpp.o
 .PHONY : src/Point2dData.o
@@ -256,6 +338,7 @@ src/Point2dData.o: src/Point2dData.cpp.o
 src/Point2dData.cpp.o:
 	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/Point2dData.cpp.o
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/Point2dData.cpp.o
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/Point2dData.cpp.o
 .PHONY : src/Point2dData.cpp.o
 
 src/Point2dData.i: src/Point2dData.cpp.i
@@ -265,6 +348,7 @@ src/Point2dData.i: src/Point2dData.cpp.i
 src/Point2dData.cpp.i:
 	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/Point2dData.cpp.i
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/Point2dData.cpp.i
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/Point2dData.cpp.i
 .PHONY : src/Point2dData.cpp.i
 
 src/Point2dData.s: src/Point2dData.cpp.s
@@ -274,6 +358,7 @@ src/Point2dData.s: src/Point2dData.cpp.s
 src/Point2dData.cpp.s:
 	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/Point2dData.cpp.s
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/Point2dData.cpp.s
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/Point2dData.cpp.s
 .PHONY : src/Point2dData.cpp.s
 
 src/Point3dData.o: src/Point3dData.cpp.o
@@ -283,6 +368,7 @@ src/Point3dData.o: src/Point3dData.cpp.o
 src/Point3dData.cpp.o:
 	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/Point3dData.cpp.o
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/Point3dData.cpp.o
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/Point3dData.cpp.o
 .PHONY : src/Point3dData.cpp.o
 
 src/Point3dData.i: src/Point3dData.cpp.i
@@ -292,6 +378,7 @@ src/Point3dData.i: src/Point3dData.cpp.i
 src/Point3dData.cpp.i:
 	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/Point3dData.cpp.i
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/Point3dData.cpp.i
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/Point3dData.cpp.i
 .PHONY : src/Point3dData.cpp.i
 
 src/Point3dData.s: src/Point3dData.cpp.s
@@ -301,14 +388,38 @@ src/Point3dData.s: src/Point3dData.cpp.s
 src/Point3dData.cpp.s:
 	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/Point3dData.cpp.s
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/Point3dData.cpp.s
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/Point3dData.cpp.s
 .PHONY : src/Point3dData.cpp.s
+
+src/test_mappoint3d.o: src/test_mappoint3d.cc.o
+.PHONY : src/test_mappoint3d.o
+
+# target to build an object file
+src/test_mappoint3d.cc.o:
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/test_mappoint3d.cc.o
+.PHONY : src/test_mappoint3d.cc.o
+
+src/test_mappoint3d.i: src/test_mappoint3d.cc.i
+.PHONY : src/test_mappoint3d.i
+
+# target to preprocess a source file
+src/test_mappoint3d.cc.i:
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/test_mappoint3d.cc.i
+.PHONY : src/test_mappoint3d.cc.i
+
+src/test_mappoint3d.s: src/test_mappoint3d.cc.s
+.PHONY : src/test_mappoint3d.s
+
+# target to generate assembly for a file
+src/test_mappoint3d.cc.s:
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/test_mappoint3d.cc.s
+.PHONY : src/test_mappoint3d.cc.s
 
 src/test_orgdata.o: src/test_orgdata.cc.o
 .PHONY : src/test_orgdata.o
 
 # target to build an object file
 src/test_orgdata.cc.o:
-	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/test_orgdata.cc.o
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/test_orgdata.cc.o
 .PHONY : src/test_orgdata.cc.o
 
@@ -317,7 +428,6 @@ src/test_orgdata.i: src/test_orgdata.cc.i
 
 # target to preprocess a source file
 src/test_orgdata.cc.i:
-	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/test_orgdata.cc.i
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/test_orgdata.cc.i
 .PHONY : src/test_orgdata.cc.i
 
@@ -326,7 +436,6 @@ src/test_orgdata.s: src/test_orgdata.cc.s
 
 # target to generate assembly for a file
 src/test_orgdata.cc.s:
-	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/test_orgdata.cc.s
 	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/test_orgdata.cc.s
 .PHONY : src/test_orgdata.cc.s
 
@@ -344,21 +453,31 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... tst1"
+	@echo "... tst2"
 	@echo "... src/CommonFun.o"
 	@echo "... src/CommonFun.i"
 	@echo "... src/CommonFun.s"
+	@echo "... src/CommonIO.o"
+	@echo "... src/CommonIO.i"
+	@echo "... src/CommonIO.s"
 	@echo "... src/DrawPoint2D.o"
 	@echo "... src/DrawPoint2D.i"
 	@echo "... src/DrawPoint2D.s"
 	@echo "... src/MapPoint2D.o"
 	@echo "... src/MapPoint2D.i"
 	@echo "... src/MapPoint2D.s"
+	@echo "... src/MapPoint3D.o"
+	@echo "... src/MapPoint3D.i"
+	@echo "... src/MapPoint3D.s"
 	@echo "... src/Point2dData.o"
 	@echo "... src/Point2dData.i"
 	@echo "... src/Point2dData.s"
 	@echo "... src/Point3dData.o"
 	@echo "... src/Point3dData.i"
 	@echo "... src/Point3dData.s"
+	@echo "... src/test_mappoint3d.o"
+	@echo "... src/test_mappoint3d.i"
+	@echo "... src/test_mappoint3d.s"
 	@echo "... src/test_orgdata.o"
 	@echo "... src/test_orgdata.i"
 	@echo "... src/test_orgdata.s"

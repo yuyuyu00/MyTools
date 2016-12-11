@@ -52,32 +52,9 @@ include CMakeFiles/tst1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/tst1.dir/flags.make
 
-CMakeFiles/tst1.dir/src/Point3dData.cpp.o: CMakeFiles/tst1.dir/flags.make
-CMakeFiles/tst1.dir/src/Point3dData.cpp.o: ../src/Point3dData.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/tst1.dir/src/Point3dData.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tst1.dir/src/Point3dData.cpp.o -c /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/Point3dData.cpp
-
-CMakeFiles/tst1.dir/src/Point3dData.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tst1.dir/src/Point3dData.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/Point3dData.cpp > CMakeFiles/tst1.dir/src/Point3dData.cpp.i
-
-CMakeFiles/tst1.dir/src/Point3dData.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tst1.dir/src/Point3dData.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/Point3dData.cpp -o CMakeFiles/tst1.dir/src/Point3dData.cpp.s
-
-CMakeFiles/tst1.dir/src/Point3dData.cpp.o.requires:
-.PHONY : CMakeFiles/tst1.dir/src/Point3dData.cpp.o.requires
-
-CMakeFiles/tst1.dir/src/Point3dData.cpp.o.provides: CMakeFiles/tst1.dir/src/Point3dData.cpp.o.requires
-	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/Point3dData.cpp.o.provides.build
-.PHONY : CMakeFiles/tst1.dir/src/Point3dData.cpp.o.provides
-
-CMakeFiles/tst1.dir/src/Point3dData.cpp.o.provides.build: CMakeFiles/tst1.dir/src/Point3dData.cpp.o
-
 CMakeFiles/tst1.dir/src/test_orgdata.cc.o: CMakeFiles/tst1.dir/flags.make
 CMakeFiles/tst1.dir/src/test_orgdata.cc.o: ../src/test_orgdata.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/tst1.dir/src/test_orgdata.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tst1.dir/src/test_orgdata.cc.o -c /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/test_orgdata.cc
 
@@ -97,6 +74,29 @@ CMakeFiles/tst1.dir/src/test_orgdata.cc.o.provides: CMakeFiles/tst1.dir/src/test
 .PHONY : CMakeFiles/tst1.dir/src/test_orgdata.cc.o.provides
 
 CMakeFiles/tst1.dir/src/test_orgdata.cc.o.provides.build: CMakeFiles/tst1.dir/src/test_orgdata.cc.o
+
+CMakeFiles/tst1.dir/src/Point3dData.cpp.o: CMakeFiles/tst1.dir/flags.make
+CMakeFiles/tst1.dir/src/Point3dData.cpp.o: ../src/Point3dData.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/tst1.dir/src/Point3dData.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tst1.dir/src/Point3dData.cpp.o -c /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/Point3dData.cpp
+
+CMakeFiles/tst1.dir/src/Point3dData.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tst1.dir/src/Point3dData.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/Point3dData.cpp > CMakeFiles/tst1.dir/src/Point3dData.cpp.i
+
+CMakeFiles/tst1.dir/src/Point3dData.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tst1.dir/src/Point3dData.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/Point3dData.cpp -o CMakeFiles/tst1.dir/src/Point3dData.cpp.s
+
+CMakeFiles/tst1.dir/src/Point3dData.cpp.o.requires:
+.PHONY : CMakeFiles/tst1.dir/src/Point3dData.cpp.o.requires
+
+CMakeFiles/tst1.dir/src/Point3dData.cpp.o.provides: CMakeFiles/tst1.dir/src/Point3dData.cpp.o.requires
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/Point3dData.cpp.o.provides.build
+.PHONY : CMakeFiles/tst1.dir/src/Point3dData.cpp.o.provides
+
+CMakeFiles/tst1.dir/src/Point3dData.cpp.o.provides.build: CMakeFiles/tst1.dir/src/Point3dData.cpp.o
 
 CMakeFiles/tst1.dir/src/DrawPoint2D.cpp.o: CMakeFiles/tst1.dir/flags.make
 CMakeFiles/tst1.dir/src/DrawPoint2D.cpp.o: ../src/DrawPoint2D.cpp
@@ -190,24 +190,74 @@ CMakeFiles/tst1.dir/src/CommonFun.cpp.o.provides: CMakeFiles/tst1.dir/src/Common
 
 CMakeFiles/tst1.dir/src/CommonFun.cpp.o.provides.build: CMakeFiles/tst1.dir/src/CommonFun.cpp.o
 
+CMakeFiles/tst1.dir/src/MapPoint3D.cpp.o: CMakeFiles/tst1.dir/flags.make
+CMakeFiles/tst1.dir/src/MapPoint3D.cpp.o: ../src/MapPoint3D.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/tst1.dir/src/MapPoint3D.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tst1.dir/src/MapPoint3D.cpp.o -c /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/MapPoint3D.cpp
+
+CMakeFiles/tst1.dir/src/MapPoint3D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tst1.dir/src/MapPoint3D.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/MapPoint3D.cpp > CMakeFiles/tst1.dir/src/MapPoint3D.cpp.i
+
+CMakeFiles/tst1.dir/src/MapPoint3D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tst1.dir/src/MapPoint3D.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/MapPoint3D.cpp -o CMakeFiles/tst1.dir/src/MapPoint3D.cpp.s
+
+CMakeFiles/tst1.dir/src/MapPoint3D.cpp.o.requires:
+.PHONY : CMakeFiles/tst1.dir/src/MapPoint3D.cpp.o.requires
+
+CMakeFiles/tst1.dir/src/MapPoint3D.cpp.o.provides: CMakeFiles/tst1.dir/src/MapPoint3D.cpp.o.requires
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/MapPoint3D.cpp.o.provides.build
+.PHONY : CMakeFiles/tst1.dir/src/MapPoint3D.cpp.o.provides
+
+CMakeFiles/tst1.dir/src/MapPoint3D.cpp.o.provides.build: CMakeFiles/tst1.dir/src/MapPoint3D.cpp.o
+
+CMakeFiles/tst1.dir/src/CommonIO.cpp.o: CMakeFiles/tst1.dir/flags.make
+CMakeFiles/tst1.dir/src/CommonIO.cpp.o: ../src/CommonIO.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/tst1.dir/src/CommonIO.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tst1.dir/src/CommonIO.cpp.o -c /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/CommonIO.cpp
+
+CMakeFiles/tst1.dir/src/CommonIO.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tst1.dir/src/CommonIO.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/CommonIO.cpp > CMakeFiles/tst1.dir/src/CommonIO.cpp.i
+
+CMakeFiles/tst1.dir/src/CommonIO.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tst1.dir/src/CommonIO.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/CommonIO.cpp -o CMakeFiles/tst1.dir/src/CommonIO.cpp.s
+
+CMakeFiles/tst1.dir/src/CommonIO.cpp.o.requires:
+.PHONY : CMakeFiles/tst1.dir/src/CommonIO.cpp.o.requires
+
+CMakeFiles/tst1.dir/src/CommonIO.cpp.o.provides: CMakeFiles/tst1.dir/src/CommonIO.cpp.o.requires
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/CommonIO.cpp.o.provides.build
+.PHONY : CMakeFiles/tst1.dir/src/CommonIO.cpp.o.provides
+
+CMakeFiles/tst1.dir/src/CommonIO.cpp.o.provides.build: CMakeFiles/tst1.dir/src/CommonIO.cpp.o
+
 # Object files for target tst1
 tst1_OBJECTS = \
-"CMakeFiles/tst1.dir/src/Point3dData.cpp.o" \
 "CMakeFiles/tst1.dir/src/test_orgdata.cc.o" \
+"CMakeFiles/tst1.dir/src/Point3dData.cpp.o" \
 "CMakeFiles/tst1.dir/src/DrawPoint2D.cpp.o" \
 "CMakeFiles/tst1.dir/src/MapPoint2D.cpp.o" \
 "CMakeFiles/tst1.dir/src/Point2dData.cpp.o" \
-"CMakeFiles/tst1.dir/src/CommonFun.cpp.o"
+"CMakeFiles/tst1.dir/src/CommonFun.cpp.o" \
+"CMakeFiles/tst1.dir/src/MapPoint3D.cpp.o" \
+"CMakeFiles/tst1.dir/src/CommonIO.cpp.o"
 
 # External object files for target tst1
 tst1_EXTERNAL_OBJECTS =
 
-tst1: CMakeFiles/tst1.dir/src/Point3dData.cpp.o
 tst1: CMakeFiles/tst1.dir/src/test_orgdata.cc.o
+tst1: CMakeFiles/tst1.dir/src/Point3dData.cpp.o
 tst1: CMakeFiles/tst1.dir/src/DrawPoint2D.cpp.o
 tst1: CMakeFiles/tst1.dir/src/MapPoint2D.cpp.o
 tst1: CMakeFiles/tst1.dir/src/Point2dData.cpp.o
 tst1: CMakeFiles/tst1.dir/src/CommonFun.cpp.o
+tst1: CMakeFiles/tst1.dir/src/MapPoint3D.cpp.o
+tst1: CMakeFiles/tst1.dir/src/CommonIO.cpp.o
 tst1: CMakeFiles/tst1.dir/build.make
 tst1: /usr/local/lib/libopencv_videostab.so.2.4.9
 tst1: /usr/local/lib/libopencv_video.so.2.4.9
@@ -250,12 +300,14 @@ tst1: CMakeFiles/tst1.dir/link.txt
 CMakeFiles/tst1.dir/build: tst1
 .PHONY : CMakeFiles/tst1.dir/build
 
-CMakeFiles/tst1.dir/requires: CMakeFiles/tst1.dir/src/Point3dData.cpp.o.requires
 CMakeFiles/tst1.dir/requires: CMakeFiles/tst1.dir/src/test_orgdata.cc.o.requires
+CMakeFiles/tst1.dir/requires: CMakeFiles/tst1.dir/src/Point3dData.cpp.o.requires
 CMakeFiles/tst1.dir/requires: CMakeFiles/tst1.dir/src/DrawPoint2D.cpp.o.requires
 CMakeFiles/tst1.dir/requires: CMakeFiles/tst1.dir/src/MapPoint2D.cpp.o.requires
 CMakeFiles/tst1.dir/requires: CMakeFiles/tst1.dir/src/Point2dData.cpp.o.requires
 CMakeFiles/tst1.dir/requires: CMakeFiles/tst1.dir/src/CommonFun.cpp.o.requires
+CMakeFiles/tst1.dir/requires: CMakeFiles/tst1.dir/src/MapPoint3D.cpp.o.requires
+CMakeFiles/tst1.dir/requires: CMakeFiles/tst1.dir/src/CommonIO.cpp.o.requires
 .PHONY : CMakeFiles/tst1.dir/requires
 
 CMakeFiles/tst1.dir/clean:

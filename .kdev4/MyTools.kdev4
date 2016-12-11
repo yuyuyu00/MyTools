@@ -12,7 +12,7 @@ Extra Arguments=
 Install Directory=file:///home/yuyuyu00/desk/CartographerNew/install
 
 [Launch]
-Launch Configurations=Launch Configuration 0
+Launch Configurations=Launch Configuration 0,Launch Configuration 1
 
 [Launch][Launch Configuration 0]
 Configured Launch Modes=execute
@@ -39,6 +39,24 @@ Start With=ApplicationOutput
 Use External Terminal=false
 Working Directory=
 isExecutable=true
+
+[Launch][Launch Configuration 1]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=tst2
+Type=Native Application
+
+[Launch][Launch Configuration 1][Data]
+Arguments=-c
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Nothing
+EnvironmentGroup=default
+Executable=file:///home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=MyTools,tst2
+Use External Terminal=false
+Working Directory=
+isExecutable=false
 
 [Project]
 VersionControlSupport=kdevgit

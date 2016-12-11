@@ -56,6 +56,9 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unsp
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/MyTools" TYPE FILE FILES
+    "/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/CommonIO.h"
+    "/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/funtest.h"
+    "/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/MapPoint3D.h"
     "/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/Point2dData.h"
     "/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/CommonFun.h"
     "/home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/Point3dData.h"

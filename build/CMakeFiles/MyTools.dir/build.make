@@ -75,32 +75,9 @@ CMakeFiles/MyTools.dir/src/Point3dData.cpp.o.provides: CMakeFiles/MyTools.dir/sr
 
 CMakeFiles/MyTools.dir/src/Point3dData.cpp.o.provides.build: CMakeFiles/MyTools.dir/src/Point3dData.cpp.o
 
-CMakeFiles/MyTools.dir/src/test_orgdata.cc.o: CMakeFiles/MyTools.dir/flags.make
-CMakeFiles/MyTools.dir/src/test_orgdata.cc.o: ../src/test_orgdata.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/MyTools.dir/src/test_orgdata.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MyTools.dir/src/test_orgdata.cc.o -c /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/test_orgdata.cc
-
-CMakeFiles/MyTools.dir/src/test_orgdata.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyTools.dir/src/test_orgdata.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/test_orgdata.cc > CMakeFiles/MyTools.dir/src/test_orgdata.cc.i
-
-CMakeFiles/MyTools.dir/src/test_orgdata.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyTools.dir/src/test_orgdata.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/test_orgdata.cc -o CMakeFiles/MyTools.dir/src/test_orgdata.cc.s
-
-CMakeFiles/MyTools.dir/src/test_orgdata.cc.o.requires:
-.PHONY : CMakeFiles/MyTools.dir/src/test_orgdata.cc.o.requires
-
-CMakeFiles/MyTools.dir/src/test_orgdata.cc.o.provides: CMakeFiles/MyTools.dir/src/test_orgdata.cc.o.requires
-	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/test_orgdata.cc.o.provides.build
-.PHONY : CMakeFiles/MyTools.dir/src/test_orgdata.cc.o.provides
-
-CMakeFiles/MyTools.dir/src/test_orgdata.cc.o.provides.build: CMakeFiles/MyTools.dir/src/test_orgdata.cc.o
-
 CMakeFiles/MyTools.dir/src/DrawPoint2D.cpp.o: CMakeFiles/MyTools.dir/flags.make
 CMakeFiles/MyTools.dir/src/DrawPoint2D.cpp.o: ../src/DrawPoint2D.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/MyTools.dir/src/DrawPoint2D.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MyTools.dir/src/DrawPoint2D.cpp.o -c /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/DrawPoint2D.cpp
 
@@ -123,7 +100,7 @@ CMakeFiles/MyTools.dir/src/DrawPoint2D.cpp.o.provides.build: CMakeFiles/MyTools.
 
 CMakeFiles/MyTools.dir/src/MapPoint2D.cpp.o: CMakeFiles/MyTools.dir/flags.make
 CMakeFiles/MyTools.dir/src/MapPoint2D.cpp.o: ../src/MapPoint2D.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/MyTools.dir/src/MapPoint2D.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MyTools.dir/src/MapPoint2D.cpp.o -c /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/MapPoint2D.cpp
 
@@ -146,7 +123,7 @@ CMakeFiles/MyTools.dir/src/MapPoint2D.cpp.o.provides.build: CMakeFiles/MyTools.d
 
 CMakeFiles/MyTools.dir/src/Point2dData.cpp.o: CMakeFiles/MyTools.dir/flags.make
 CMakeFiles/MyTools.dir/src/Point2dData.cpp.o: ../src/Point2dData.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/MyTools.dir/src/Point2dData.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MyTools.dir/src/Point2dData.cpp.o -c /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/Point2dData.cpp
 
@@ -169,7 +146,7 @@ CMakeFiles/MyTools.dir/src/Point2dData.cpp.o.provides.build: CMakeFiles/MyTools.
 
 CMakeFiles/MyTools.dir/src/CommonFun.cpp.o: CMakeFiles/MyTools.dir/flags.make
 CMakeFiles/MyTools.dir/src/CommonFun.cpp.o: ../src/CommonFun.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/MyTools.dir/src/CommonFun.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MyTools.dir/src/CommonFun.cpp.o -c /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/CommonFun.cpp
 
@@ -190,24 +167,72 @@ CMakeFiles/MyTools.dir/src/CommonFun.cpp.o.provides: CMakeFiles/MyTools.dir/src/
 
 CMakeFiles/MyTools.dir/src/CommonFun.cpp.o.provides.build: CMakeFiles/MyTools.dir/src/CommonFun.cpp.o
 
+CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.o: CMakeFiles/MyTools.dir/flags.make
+CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.o: ../src/MapPoint3D.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.o -c /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/MapPoint3D.cpp
+
+CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/MapPoint3D.cpp > CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.i
+
+CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/MapPoint3D.cpp -o CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.s
+
+CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.o.requires:
+.PHONY : CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.o.requires
+
+CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.o.provides: CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.o.requires
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.o.provides.build
+.PHONY : CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.o.provides
+
+CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.o.provides.build: CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.o
+
+CMakeFiles/MyTools.dir/src/CommonIO.cpp.o: CMakeFiles/MyTools.dir/flags.make
+CMakeFiles/MyTools.dir/src/CommonIO.cpp.o: ../src/CommonIO.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/MyTools.dir/src/CommonIO.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MyTools.dir/src/CommonIO.cpp.o -c /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/CommonIO.cpp
+
+CMakeFiles/MyTools.dir/src/CommonIO.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyTools.dir/src/CommonIO.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/CommonIO.cpp > CMakeFiles/MyTools.dir/src/CommonIO.cpp.i
+
+CMakeFiles/MyTools.dir/src/CommonIO.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyTools.dir/src/CommonIO.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/CommonIO.cpp -o CMakeFiles/MyTools.dir/src/CommonIO.cpp.s
+
+CMakeFiles/MyTools.dir/src/CommonIO.cpp.o.requires:
+.PHONY : CMakeFiles/MyTools.dir/src/CommonIO.cpp.o.requires
+
+CMakeFiles/MyTools.dir/src/CommonIO.cpp.o.provides: CMakeFiles/MyTools.dir/src/CommonIO.cpp.o.requires
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/CommonIO.cpp.o.provides.build
+.PHONY : CMakeFiles/MyTools.dir/src/CommonIO.cpp.o.provides
+
+CMakeFiles/MyTools.dir/src/CommonIO.cpp.o.provides.build: CMakeFiles/MyTools.dir/src/CommonIO.cpp.o
+
 # Object files for target MyTools
 MyTools_OBJECTS = \
 "CMakeFiles/MyTools.dir/src/Point3dData.cpp.o" \
-"CMakeFiles/MyTools.dir/src/test_orgdata.cc.o" \
 "CMakeFiles/MyTools.dir/src/DrawPoint2D.cpp.o" \
 "CMakeFiles/MyTools.dir/src/MapPoint2D.cpp.o" \
 "CMakeFiles/MyTools.dir/src/Point2dData.cpp.o" \
-"CMakeFiles/MyTools.dir/src/CommonFun.cpp.o"
+"CMakeFiles/MyTools.dir/src/CommonFun.cpp.o" \
+"CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.o" \
+"CMakeFiles/MyTools.dir/src/CommonIO.cpp.o"
 
 # External object files for target MyTools
 MyTools_EXTERNAL_OBJECTS =
 
 libMyTools.a: CMakeFiles/MyTools.dir/src/Point3dData.cpp.o
-libMyTools.a: CMakeFiles/MyTools.dir/src/test_orgdata.cc.o
 libMyTools.a: CMakeFiles/MyTools.dir/src/DrawPoint2D.cpp.o
 libMyTools.a: CMakeFiles/MyTools.dir/src/MapPoint2D.cpp.o
 libMyTools.a: CMakeFiles/MyTools.dir/src/Point2dData.cpp.o
 libMyTools.a: CMakeFiles/MyTools.dir/src/CommonFun.cpp.o
+libMyTools.a: CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.o
+libMyTools.a: CMakeFiles/MyTools.dir/src/CommonIO.cpp.o
 libMyTools.a: CMakeFiles/MyTools.dir/build.make
 libMyTools.a: CMakeFiles/MyTools.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libMyTools.a"
@@ -219,11 +244,12 @@ CMakeFiles/MyTools.dir/build: libMyTools.a
 .PHONY : CMakeFiles/MyTools.dir/build
 
 CMakeFiles/MyTools.dir/requires: CMakeFiles/MyTools.dir/src/Point3dData.cpp.o.requires
-CMakeFiles/MyTools.dir/requires: CMakeFiles/MyTools.dir/src/test_orgdata.cc.o.requires
 CMakeFiles/MyTools.dir/requires: CMakeFiles/MyTools.dir/src/DrawPoint2D.cpp.o.requires
 CMakeFiles/MyTools.dir/requires: CMakeFiles/MyTools.dir/src/MapPoint2D.cpp.o.requires
 CMakeFiles/MyTools.dir/requires: CMakeFiles/MyTools.dir/src/Point2dData.cpp.o.requires
 CMakeFiles/MyTools.dir/requires: CMakeFiles/MyTools.dir/src/CommonFun.cpp.o.requires
+CMakeFiles/MyTools.dir/requires: CMakeFiles/MyTools.dir/src/MapPoint3D.cpp.o.requires
+CMakeFiles/MyTools.dir/requires: CMakeFiles/MyTools.dir/src/CommonIO.cpp.o.requires
 .PHONY : CMakeFiles/MyTools.dir/requires
 
 CMakeFiles/MyTools.dir/clean:

@@ -30,7 +30,7 @@ get_filename_component(MyTools_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
 #set(MyTools_CMAKE_DIR "")
 
 
-set(MyTools_INCLUDE_DIRS "/home/yuyuyu00/desk/CartographerNew/install/include/Point2dData.h;/home/yuyuyu00/desk/CartographerNew/install/include/CommonFun.h;/home/yuyuyu00/desk/CartographerNew/install/include/Point3dData.h;/home/yuyuyu00/desk/CartographerNew/install/include/DrawPoint2D.h;/home/yuyuyu00/desk/CartographerNew/install/include/MapPoint2D.h")
+set(MyTools_INCLUDE_DIRS "/home/yuyuyu00/desk/CartographerNew/install/include/MyTools/")
 
 set(MyTools_LIBS "/home/yuyuyu00/desk/CartographerNew/install/lib/libMyTools.a")
  
