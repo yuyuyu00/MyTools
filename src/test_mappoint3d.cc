@@ -18,23 +18,37 @@ using namespace My::map3d;
 using namespace std;
 
 
+#ifdef WIN32
+
+#define mpath "E://data//cartodata//"
+#else
+#define mpath "/mnt/hgfs/E/data/cartodata/"
+#endif // WIN32
 
 
 int main (int argc, char** argv)
 {
 	MapPoint3D pt;
-	fstream fd("/mnt/hgfs/E/data/cartodata/1.txt");
+	fstream fd((string(mpath)+string("1.txt")).c_str());
 	string tmp;
 	MapPoints3D mp;
+	
 	
 	while(true)
 	{
 		
-	
+		
 		getline(fd,tmp);
 		if(tmp=="")
 			break;
-		string path = string("/mnt/hgfs/E/data/cartodata/re_pts1/")+tmp.substr(0,tmp.length()-1);;
+		string path;
+		
+		#ifdef WIN32
+		path = string(mpath) + string("re_pts1//") + tmp.substr(0, tmp.length());
+		#else
+		path = string(mpath) + string("re_pts1//") + tmp.substr(0, tmp.length() - 1);
+		#endif // WIN32
+		
 		
 		//fi.open(path);
 		cout<<path<<endl;
@@ -48,6 +62,6 @@ int main (int argc, char** argv)
 		mp.SetOnePatch(pt);
 		mp.Show();
 		boost::this_thread::sleep (boost::posix_time::microseconds (100000));
-	
+		
 	}
 }

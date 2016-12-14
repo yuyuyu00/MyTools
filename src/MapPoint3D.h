@@ -30,6 +30,7 @@ namespace My
 			
 			
 		public:
+			double m_tm;
 			int m_id;
 			int m_filetype;
 		};
