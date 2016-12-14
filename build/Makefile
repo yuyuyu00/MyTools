@@ -271,6 +271,36 @@ src/DrawPoint2D.cpp.s:
 	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/DrawPoint2D.cpp.s
 .PHONY : src/DrawPoint2D.cpp.s
 
+src/IMUData.o: src/IMUData.cpp.o
+.PHONY : src/IMUData.o
+
+# target to build an object file
+src/IMUData.cpp.o:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/IMUData.cpp.o
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/IMUData.cpp.o
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/IMUData.cpp.o
+.PHONY : src/IMUData.cpp.o
+
+src/IMUData.i: src/IMUData.cpp.i
+.PHONY : src/IMUData.i
+
+# target to preprocess a source file
+src/IMUData.cpp.i:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/IMUData.cpp.i
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/IMUData.cpp.i
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/IMUData.cpp.i
+.PHONY : src/IMUData.cpp.i
+
+src/IMUData.s: src/IMUData.cpp.s
+.PHONY : src/IMUData.s
+
+# target to generate assembly for a file
+src/IMUData.cpp.s:
+	$(MAKE) -f CMakeFiles/MyTools.dir/build.make CMakeFiles/MyTools.dir/src/IMUData.cpp.s
+	$(MAKE) -f CMakeFiles/tst1.dir/build.make CMakeFiles/tst1.dir/src/IMUData.cpp.s
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/IMUData.cpp.s
+.PHONY : src/IMUData.cpp.s
+
 src/MapPoint2D.o: src/MapPoint2D.cpp.o
 .PHONY : src/MapPoint2D.o
 
@@ -463,6 +493,9 @@ help:
 	@echo "... src/DrawPoint2D.o"
 	@echo "... src/DrawPoint2D.i"
 	@echo "... src/DrawPoint2D.s"
+	@echo "... src/IMUData.o"
+	@echo "... src/IMUData.i"
+	@echo "... src/IMUData.s"
 	@echo "... src/MapPoint2D.o"
 	@echo "... src/MapPoint2D.i"
 	@echo "... src/MapPoint2D.s"

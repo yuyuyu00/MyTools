@@ -40,6 +40,9 @@ CMakeFiles/MyTools.dir/src/DrawPoint2D.cpp.o: /usr/local/include/opencv2/video/b
 CMakeFiles/MyTools.dir/src/DrawPoint2D.cpp.o: /usr/local/include/opencv2/video/tracking.hpp
 CMakeFiles/MyTools.dir/src/DrawPoint2D.cpp.o: /usr/local/include/opencv2/video/video.hpp
 
+CMakeFiles/MyTools.dir/src/IMUData.cpp.o: ../src/IMUData.cpp
+CMakeFiles/MyTools.dir/src/IMUData.cpp.o: ../src/IMUData.h
+
 CMakeFiles/MyTools.dir/src/MapPoint2D.cpp.o: ../src/CommonIO.h
 CMakeFiles/MyTools.dir/src/MapPoint2D.cpp.o: ../src/MapPoint2D.cpp
 CMakeFiles/MyTools.dir/src/MapPoint2D.cpp.o: ../src/MapPoint2D.h

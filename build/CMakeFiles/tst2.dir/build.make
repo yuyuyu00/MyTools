@@ -167,9 +167,32 @@ CMakeFiles/tst2.dir/src/Point2dData.cpp.o.provides: CMakeFiles/tst2.dir/src/Poin
 
 CMakeFiles/tst2.dir/src/Point2dData.cpp.o.provides.build: CMakeFiles/tst2.dir/src/Point2dData.cpp.o
 
+CMakeFiles/tst2.dir/src/IMUData.cpp.o: CMakeFiles/tst2.dir/flags.make
+CMakeFiles/tst2.dir/src/IMUData.cpp.o: ../src/IMUData.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/tst2.dir/src/IMUData.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tst2.dir/src/IMUData.cpp.o -c /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/IMUData.cpp
+
+CMakeFiles/tst2.dir/src/IMUData.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tst2.dir/src/IMUData.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/IMUData.cpp > CMakeFiles/tst2.dir/src/IMUData.cpp.i
+
+CMakeFiles/tst2.dir/src/IMUData.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tst2.dir/src/IMUData.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/IMUData.cpp -o CMakeFiles/tst2.dir/src/IMUData.cpp.s
+
+CMakeFiles/tst2.dir/src/IMUData.cpp.o.requires:
+.PHONY : CMakeFiles/tst2.dir/src/IMUData.cpp.o.requires
+
+CMakeFiles/tst2.dir/src/IMUData.cpp.o.provides: CMakeFiles/tst2.dir/src/IMUData.cpp.o.requires
+	$(MAKE) -f CMakeFiles/tst2.dir/build.make CMakeFiles/tst2.dir/src/IMUData.cpp.o.provides.build
+.PHONY : CMakeFiles/tst2.dir/src/IMUData.cpp.o.provides
+
+CMakeFiles/tst2.dir/src/IMUData.cpp.o.provides.build: CMakeFiles/tst2.dir/src/IMUData.cpp.o
+
 CMakeFiles/tst2.dir/src/CommonFun.cpp.o: CMakeFiles/tst2.dir/flags.make
 CMakeFiles/tst2.dir/src/CommonFun.cpp.o: ../src/CommonFun.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/tst2.dir/src/CommonFun.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tst2.dir/src/CommonFun.cpp.o -c /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/CommonFun.cpp
 
@@ -192,7 +215,7 @@ CMakeFiles/tst2.dir/src/CommonFun.cpp.o.provides.build: CMakeFiles/tst2.dir/src/
 
 CMakeFiles/tst2.dir/src/MapPoint3D.cpp.o: CMakeFiles/tst2.dir/flags.make
 CMakeFiles/tst2.dir/src/MapPoint3D.cpp.o: ../src/MapPoint3D.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/tst2.dir/src/MapPoint3D.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tst2.dir/src/MapPoint3D.cpp.o -c /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/MapPoint3D.cpp
 
@@ -215,7 +238,7 @@ CMakeFiles/tst2.dir/src/MapPoint3D.cpp.o.provides.build: CMakeFiles/tst2.dir/src
 
 CMakeFiles/tst2.dir/src/CommonIO.cpp.o: CMakeFiles/tst2.dir/flags.make
 CMakeFiles/tst2.dir/src/CommonIO.cpp.o: ../src/CommonIO.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/tst2.dir/src/CommonIO.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tst2.dir/src/CommonIO.cpp.o -c /home/yuyuyu00/desk/CartographerNew/testPrj/MyTools/src/CommonIO.cpp
 
@@ -243,6 +266,7 @@ tst2_OBJECTS = \
 "CMakeFiles/tst2.dir/src/DrawPoint2D.cpp.o" \
 "CMakeFiles/tst2.dir/src/MapPoint2D.cpp.o" \
 "CMakeFiles/tst2.dir/src/Point2dData.cpp.o" \
+"CMakeFiles/tst2.dir/src/IMUData.cpp.o" \
 "CMakeFiles/tst2.dir/src/CommonFun.cpp.o" \
 "CMakeFiles/tst2.dir/src/MapPoint3D.cpp.o" \
 "CMakeFiles/tst2.dir/src/CommonIO.cpp.o"
@@ -255,6 +279,7 @@ tst2: CMakeFiles/tst2.dir/src/Point3dData.cpp.o
 tst2: CMakeFiles/tst2.dir/src/DrawPoint2D.cpp.o
 tst2: CMakeFiles/tst2.dir/src/MapPoint2D.cpp.o
 tst2: CMakeFiles/tst2.dir/src/Point2dData.cpp.o
+tst2: CMakeFiles/tst2.dir/src/IMUData.cpp.o
 tst2: CMakeFiles/tst2.dir/src/CommonFun.cpp.o
 tst2: CMakeFiles/tst2.dir/src/MapPoint3D.cpp.o
 tst2: CMakeFiles/tst2.dir/src/CommonIO.cpp.o
@@ -382,6 +407,7 @@ CMakeFiles/tst2.dir/requires: CMakeFiles/tst2.dir/src/Point3dData.cpp.o.requires
 CMakeFiles/tst2.dir/requires: CMakeFiles/tst2.dir/src/DrawPoint2D.cpp.o.requires
 CMakeFiles/tst2.dir/requires: CMakeFiles/tst2.dir/src/MapPoint2D.cpp.o.requires
 CMakeFiles/tst2.dir/requires: CMakeFiles/tst2.dir/src/Point2dData.cpp.o.requires
+CMakeFiles/tst2.dir/requires: CMakeFiles/tst2.dir/src/IMUData.cpp.o.requires
 CMakeFiles/tst2.dir/requires: CMakeFiles/tst2.dir/src/CommonFun.cpp.o.requires
 CMakeFiles/tst2.dir/requires: CMakeFiles/tst2.dir/src/MapPoint3D.cpp.o.requires
 CMakeFiles/tst2.dir/requires: CMakeFiles/tst2.dir/src/CommonIO.cpp.o.requires

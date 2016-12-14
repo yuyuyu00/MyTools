@@ -40,6 +40,9 @@ CMakeFiles/tst1.dir/src/DrawPoint2D.cpp.o: /usr/local/include/opencv2/video/back
 CMakeFiles/tst1.dir/src/DrawPoint2D.cpp.o: /usr/local/include/opencv2/video/tracking.hpp
 CMakeFiles/tst1.dir/src/DrawPoint2D.cpp.o: /usr/local/include/opencv2/video/video.hpp
 
+CMakeFiles/tst1.dir/src/IMUData.cpp.o: ../src/IMUData.cpp
+CMakeFiles/tst1.dir/src/IMUData.cpp.o: ../src/IMUData.h
+
 CMakeFiles/tst1.dir/src/MapPoint2D.cpp.o: ../src/CommonIO.h
 CMakeFiles/tst1.dir/src/MapPoint2D.cpp.o: ../src/MapPoint2D.cpp
 CMakeFiles/tst1.dir/src/MapPoint2D.cpp.o: ../src/MapPoint2D.h
