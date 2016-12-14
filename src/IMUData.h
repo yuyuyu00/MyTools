@@ -35,13 +35,13 @@ namespace My
 		IMUDatas();
 		~IMUDatas();
 		
-		bool ReadData(const char* path);
+		bool ReadData(const char* path,int type=0);
 		
 		bool SetOnePatch(IMUData& p);
 		
 	public:
 		vector<IMUData*> m_dat;
-		
+		int m_type=0;
 	};
 
 }

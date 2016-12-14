@@ -50,7 +50,20 @@ namespace My
 				if(tmp=="")
 					break;
 				stringstream ss(tmp);
-				ss>>pt.x>>pt.y>>pt.z;
+				
+				
+				if(m_filetype==0)
+					ss>>pt.x>>pt.y>>pt.z;
+				else if(m_filetype==1)
+				{
+					int tm=0;
+					sscanf(tmp.c_str(),",%d, %f, %f, %f",&tm,&pt.x,&pt.y,&pt.z);
+					
+					m_tm = double(tm)/10000000.;
+				}
+				
+				
+				
 				this->push_back(pt);
 			}
 			delete buf;
