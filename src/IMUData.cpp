@@ -51,7 +51,7 @@ namespace My
 				break;
 			}
 			
-			sscanf(tmp.c_str(),"%f %f %f %f %f %f %f",&da.m_gryx,&da.m_gryy,&da.m_gryz,&da.m_accx,&da.m_accy,&da.m_accz,&da.m_tm);
+			sscanf(tmp.c_str(),"%lf %lf %lf %lf %lf %lf %lf",&da.m_gryx,&da.m_gryy,&da.m_gryz,&da.m_accx,&da.m_accy,&da.m_accz,&da.m_tm);
 			SetOnePatch(da);
 			
 		}
