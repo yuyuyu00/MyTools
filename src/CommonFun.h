@@ -10,7 +10,9 @@ using namespace My;
 
 namespace My
 {
-
+#ifndef M_PI
+	#define M_PI  3.1415926535897932384626433832795
+#endif
 		
 		
 		int DrawMps(vector<MapPoint*>& mps, CDrawPoint2D& dr);

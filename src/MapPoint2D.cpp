@@ -5,7 +5,7 @@
 #include <sstream>
 #include <string>
 #include "memory.h"
-
+#include <iostream>
 #include "CommonIO.h"
 
 namespace My
@@ -92,7 +92,6 @@ namespace My
 		
 		return true;
 	}
-	
 	
 	vector<MapPoint*> MapPoints::ReadOdmfile( const char* odmpath )
 	{
