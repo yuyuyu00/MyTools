@@ -4,10 +4,10 @@ project(MyTools)
 
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 #添加依赖性
-find_package(OpenCV  REQUIRED )
-message(${OpenCV_LIBS})
-find_package(PCL  REQUIRED )
-message(${PCL_LIBRARIES})
+find_package(OpenCV   )
+#message(${OpenCV_LIBS})
+find_package(PCL   )
+#message(${PCL_LIBRARIES})
 
 #link_directories = (  )
 #set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
@@ -34,8 +34,8 @@ endif(NOT( ${LIBSRC}  MATCHES "^test_.*"))
 ENDFOREACH(S)
 
 #测试程序
-add_executable(tst1 "src/test_orgdata.cc" ${LIBSRCS})
-add_executable(tst2 "src/test_mappoint3d.cc" ${LIBSRCS} )
+#add_executable(tst1 "src/test_orgdata.cc" )
+#add_executable(tst2 "src/test_mappoint3d.cc"  )
 
 #静态库生成
 ADD_LIBRARY(MyTools STATIC ${LIBSRCS})
@@ -54,8 +54,8 @@ ENDFOREACH(F)
 include_directories(${OPENCV_INCLUDE_DIRS})
 include_directories(${PCL_INCLUDE_DIRS})
 #message("current---"  ${OPENCV_LIBS} )
-target_link_libraries(tst1 ${OpenCV_LIBS} ${PCL_LIBRARIES})
-target_link_libraries(tst2 ${OpenCV_LIBS} ${PCL_LIBRARIES})
+#target_link_libraries(tst1 ${OpenCV_LIBS} ${PCL_LIBRARIES})
+#target_link_libraries(tst2 ${OpenCV_LIBS} ${PCL_LIBRARIES})
 
 #设置config-CMAKE
 #message(${OpenCV_DIR})
@@ -67,7 +67,7 @@ configure_file(MyToolsConfig.cmake.in   "${PROJECT_BINARY_DIR}${CMAKE_FILES_DIRE
 
 
 #生成路径
-install(TARGETS tst1 RUNTIME DESTINATION bin)
+#install(TARGETS tst1 RUNTIME DESTINATION bin)
 INSTALL(TARGETS MyTools  ARCHIVE DESTINATION lib)
 INSTALL(FILES ${incfile} DESTINATION include/MyTools)
 install(FILES   "${PROJECT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/MyToolsConfig.cmake"  DESTINATION share/MyTools)

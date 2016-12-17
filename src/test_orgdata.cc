@@ -16,8 +16,8 @@ int main()
 	
 	CDrawPoint2D dr("img");
 	
-	DrawMps(mps.mps,dr);
+	//DrawMps(mps.mps,dr);
 	
-	cout<<dat.GetOneData()<<endl;
+	//cout<<dat.GetOneData()<<endl;
 
 }

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\CommonFun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\CommonIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\DrawPoint2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\IMUData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\MapPoint2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\MapPoint3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\Point2dData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\Point3dData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\yuyuyu00\Source\Repos\MyTools\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BDFBD9D2-75F8-3A75-B84A-205A4C01B936}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

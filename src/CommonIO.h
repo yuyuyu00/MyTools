@@ -8,6 +8,10 @@ using namespace std;
 namespace My
 {
 	
+#ifndef M_PI
+#define M_PI  3.1415926535897932384626433832795
+#endif
+
 	//读取文件至内存
 	char* GetFileBuf(const char* path);
 

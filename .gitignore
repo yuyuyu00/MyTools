@@ -1,0 +1,14 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/buildx86/CMakeFiles/3.6.2/CompilerIdC/Debug/CompilerIdC.tlog/link-VCTIP.read.70.tlog
+/buildx86/MyTools.VC.VC.opendb
+/buildx86/CMakeFiles/3.6.2/CompilerIdC/Debug/CompilerIdC.tlog/link-VCTIP.read.72.tlog
+/buildx86/CMakeFiles/3.6.2/CompilerIdC/Debug/CompilerIdC.tlog/link-VCTIP.write.23.tlog
+/buildx86/CMakeFiles/3.6.2/CompilerIdC/Debug/CompilerIdC.tlog/link-VCTIP.write.1.tlog
+/buildx86/CMakeFiles/3.6.2/CompilerIdC/Debug/CompilerIdC.tlog/link-VCTIP.read.23.tlog
+/buildx86/CMakeFiles/3.6.2/CompilerIdC/Debug/CompilerIdC.tlog/link-VCTIP.read.14.tlog
+/buildx86/CMakeFiles/3.6.2/CompilerIdC/Debug/CompilerIdC.tlog/link-VCTIP.read.1.tlog
+/buildx86/CMakeFiles/3.6.2/CompilerIdC/Debug/CompilerIdC.tlog/link-VCTIP.delete.23.tlog
+/buildx86/CMakeFiles/3.6.2/CompilerIdC/Debug/CompilerIdC.tlog/link-VCTIP.delete.1.tlog
