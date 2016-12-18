@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -57,25 +57,25 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-    <PropertyGroup>
-      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\yuyuyu00\Source\Repos\MyTools\buildx86\Debug\</OutDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MyTools.dir\Debug\</IntDir>
-      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MyTools</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\yuyuyu00\Source\Repos\MyTools\buildx86\Release\</OutDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MyTools.dir\Release\</IntDir>
-      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MyTools</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\yuyuyu00\Source\Repos\MyTools\buildx86\MinSizeRel\</OutDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">MyTools.dir\MinSizeRel\</IntDir>
-      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">MyTools</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\yuyuyu00\Source\Repos\MyTools\buildx86\RelWithDebInfo\</OutDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">MyTools.dir\RelWithDebInfo\</IntDir>
-      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">MyTools</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
-    </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\yuyuyu00\Source\Repos\MyTools\buildx86\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MyTools.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MyTools</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\yuyuyu00\Source\Repos\MyTools\buildx86\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MyTools.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MyTools</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\yuyuyu00\Source\Repos\MyTools\buildx86\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">MyTools.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">MyTools</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\yuyuyu00\Source\Repos\MyTools\buildx86\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">MyTools.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">MyTools</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <AdditionalIncludeDirectories>D:\libs\PCL 1.7.2\3rdParty\VTK\include\vtk-6.2;D:\libs\PCL 1.7.2\include\pcl-1.7;D:\libs\PCL 1.7.2\3rdParty\Eigen\eigen3;D:\libs\PCL 1.7.2\3rdParty\Boost\include\boost-1_57;D:\libs\PCL 1.7.2\3rdParty\FLANN\include;D:\libs\PCL 1.7.2\3rdParty\Qhull\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -123,7 +123,8 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DISABLE_OPENNI;DISABLE_OPENNI2;DISABLE_PCAP;DISABLE_PNG;vtkRenderingContext2D_AUTOINIT=1(vtkRenderingContextOpenGL);vtkRenderingCore_INCLUDE="C:/Users/yuyuyu00/Source/Repos/MyTools/buildx86/CMakeFiles/vtkRenderingCore_AUTOINIT_vtkInteractionStyle_vtkRenderingFreeType_vtkRenderingFreeTypeOpenGL_vtkRenderingOpenGL.h";vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL);CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DISABLE_OPENNI;DISABLE_OPENNI2;DISABLE_PCAP;DISABLE_PNG;vtkRenderingContext2D_AUTOINIT=1(vtkRenderingContextOpenGL);vtkRenderingCore_INCLUDE=\"C:/Users/yuyuyu00/Source/Repos/MyTools/buildx86/CMakeFiles/vtkRenderingCore_AUTOINIT_vtkInteractionStyle_vtkRenderingFreeType_vtkRenderingFreeTypeOpenGL_vtkRenderingOpenGL.h\";vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL);CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -155,7 +156,8 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DISABLE_OPENNI;DISABLE_OPENNI2;DISABLE_PCAP;DISABLE_PNG;vtkRenderingContext2D_AUTOINIT=1(vtkRenderingContextOpenGL);vtkRenderingCore_INCLUDE="C:/Users/yuyuyu00/Source/Repos/MyTools/buildx86/CMakeFiles/vtkRenderingCore_AUTOINIT_vtkInteractionStyle_vtkRenderingFreeType_vtkRenderingFreeTypeOpenGL_vtkRenderingOpenGL.h";vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL);CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DISABLE_OPENNI;DISABLE_OPENNI2;DISABLE_PCAP;DISABLE_PNG;vtkRenderingContext2D_AUTOINIT=1(vtkRenderingContextOpenGL);vtkRenderingCore_INCLUDE=\"C:/Users/yuyuyu00/Source/Repos/MyTools/buildx86/CMakeFiles/vtkRenderingCore_AUTOINIT_vtkInteractionStyle_vtkRenderingFreeType_vtkRenderingFreeTypeOpenGL_vtkRenderingOpenGL.h\";vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL);CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -262,19 +264,29 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\CommonFun.cpp"  />
-    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\CommonIO.cpp"  />
-    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\DrawPoint2D.cpp"  />
-    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\IMUData.cpp"  />
-    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\MapPoint2D.cpp"  />
-    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\MapPoint3D.cpp"  />
-    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\Point2dData.cpp"  />
-    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\Point3dData.cpp"  />
+    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\CommonFun.cpp" />
+    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\CommonIO.cpp" />
+    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\DrawPoint2D.cpp" />
+    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\IMUData.cpp" />
+    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\MapPoint2D.cpp" />
+    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\MapPoint3D.cpp" />
+    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\Point2dData.cpp" />
+    <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\Point3dData.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:/Users/yuyuyu00/Source/Repos/MyTools/buildx86/ZERO_CHECK.vcxproj">
       <Project>8C85AF14-EE2C-3CD9-BECA-6037E136E0A8</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\CommonFun.h" />
+    <ClInclude Include="..\src\CommonIO.h" />
+    <ClInclude Include="..\src\DrawPoint2D.h" />
+    <ClInclude Include="..\src\IMUData.h" />
+    <ClInclude Include="..\src\MapPoint2D.h" />
+    <ClInclude Include="..\src\MapPoint3D.h" />
+    <ClInclude Include="..\src\Point2dData.h" />
+    <ClInclude Include="..\src\Point3dData.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

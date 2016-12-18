@@ -20,7 +20,11 @@ namespace My
 
 		class MapPoint3D: public pcl::PointCloud<pcl::PointXYZ>
 		{
+
 		public:
+			typedef boost::shared_ptr<MapPoint3D> Ptr;
+
+
 			MapPoint3D();
 			~MapPoint3D();
 			MapPoint3D(const MapPoint3D& p);
@@ -34,7 +38,7 @@ namespace My
 			int m_id;
 			int m_filetype;
 		};
-		
+
 
 		
 		class MapPoints3D
@@ -46,8 +50,10 @@ namespace My
 			
 			
 			bool Show();
+
+			bool Spins(int spintime=0);
 			
-			bool AddPointCloud(MapPoint3D* p);
+			bool AddPointCloud(MapPoint3D::Ptr p);
 			
 			bool SetOnePatch(MapPoint3D& mp);
 			
@@ -56,7 +62,7 @@ namespace My
 			bool initView();
 			
 		public:
-			vector<MapPoint3D*> m_mps;
+			vector<MapPoint3D::Ptr> m_mps;
 			
 			
 		private:

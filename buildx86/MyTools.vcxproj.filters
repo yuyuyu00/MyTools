@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="C:\Users\yuyuyu00\Source\Repos\MyTools\src\CommonFun.cpp">
@@ -33,5 +33,34 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{BDFBD9D2-75F8-3A75-B84A-205A4C01B936}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Head Files">
+      <UniqueIdentifier>{56d1d8e5-97f6-4488-9287-5a9239f60daa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\CommonFun.h">
+      <Filter>Head Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CommonIO.h">
+      <Filter>Head Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DrawPoint2D.h">
+      <Filter>Head Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\IMUData.h">
+      <Filter>Head Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MapPoint2D.h">
+      <Filter>Head Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MapPoint3D.h">
+      <Filter>Head Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Point2dData.h">
+      <Filter>Head Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Point3dData.h">
+      <Filter>Head Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

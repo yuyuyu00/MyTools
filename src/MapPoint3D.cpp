@@ -82,7 +82,12 @@ namespace My
 		{
 			for(int i=0;i<m_mps.size();i++)
 			{
-				delete m_mps[i];
+				if (m_mps[i] != NULL)
+				{
+					//delete m_mps[i];
+					//m_mps[i] = NULL;
+				}
+
 			}
 			m_mps.clear();
 				
@@ -90,27 +95,26 @@ namespace My
 		
 		bool MapPoints3D::SetOnePatch(MapPoint3D& mp)
 		{
-			MapPoint3D* mpt = new MapPoint3D(mp);
+			MapPoint3D::Ptr mpt(new MapPoint3D(mp));
 			mpt->m_id = m_mps.size();
 			m_mps.push_back(mpt);
 			AddPointCloud(m_mps[m_mps.size()-1]);
 			return true;
 		}
 		
-		bool MapPoints3D::AddPointCloud(MapPoint3D* p)
+		bool MapPoints3D::AddPointCloud(MapPoint3D::Ptr p)
 		{
 			//char* mtcharid=(char*)malloc(sizeof(char)*128);
 			char buf[128];
 			sprintf(buf,"%d",p->m_id);
 			//itoa(p->m_id,mtcharid,10);
 			//类型转换
-			pcl::PointCloud<pcl::PointXYZ>* pointbase = dynamic_cast< pcl::PointCloud<pcl::PointXYZ>*>(p);
-			pcl::PointCloud<pcl::PointXYZ>::Ptr basic_cloud_ptr(pointbase);
 			
-			pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> single_color(basic_cloud_ptr, 0, 255, 0);
+
+			pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> single_color(p, 0, 255, 0);
 			//m_viewer->removePointCloud("sample cloud");
 			m_viewer->setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 10, buf);
-			m_viewer->addPointCloud<pcl::PointXYZ> (basic_cloud_ptr, single_color, buf);
+			m_viewer->addPointCloud<pcl::PointXYZ> (p, single_color, buf);
 			
 			return true;
 		}
@@ -136,9 +140,25 @@ namespace My
 				//boost::this_thread::sleep (boost::posix_time::microseconds (100000));
 			}
 			
+			
 			return true;
 		}
 		
+		bool MapPoints3D::Spins(int spintime)
+		{
+			if(!m_viewer->wasStopped())
+			{
+				if (spintime > 0)
+					m_viewer->spinOnce(spintime);
+				else if (spintime==0)
+					m_viewer->spin();
+				else
+					return false;
+				return true;
+			}
+			return false;
+		}
+
 	}
 	
 }

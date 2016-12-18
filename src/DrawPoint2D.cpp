@@ -25,32 +25,58 @@ namespace My
 		// 有关类定义的信息，请参阅 DrawPoint2D.h
 		CDrawPoint2D::CDrawPoint2D()
 		{
-			m_ImgTitle = string("img");
-			stepw=steph=1.;
-			
-			h = 780;
-			// 	xmax = -DBL_MAX;
-			// 	ymax = -DBL_MAX;
-			// 	xmin = DBL_MAX;
-			// 	ymin = DBL_MAX;
-			return;
+			new (this)CDrawPoint2D("img");
 		}
 		
 		CDrawPoint2D::CDrawPoint2D( char* title )
 		{
 			m_ImgTitle = string(title);
-			stepw=steph=1.;
+			m_stepw=m_steph=1.;
 			
-			h = 800;
-			xmax = -DBL_MAX;
-			ymax = -DBL_MAX;
-			xmin = DBL_MAX;
-			ymin = DBL_MAX;
+			m_h = 800;
+			m_xmax = -DBL_MAX;
+			m_ymax = -DBL_MAX;
+			m_xmin = DBL_MAX;
+			m_ymin = DBL_MAX;
+
+			m_zmax = -DBL_MAX;
+			m_zmin = DBL_MAX;
+
+			m_showmode = MODE_AUTO;
 		}
 		
 		
-		
-		void CDrawPoint2D::SetPointsRuningTime( vector<DrawPoint>& pts ,TypeColor tr)
+
+		void CDrawPoint2D::SetMapPoint3RuningTime(map3d::MapPoint3D& mp3, PointTypeUnit type /*= POINTS_UNIT*/, TypeColor tp /*= TYPES_WHITE*/)
+		{
+			DrawPts p;
+			p.col=tp;
+			p.typ = type;
+			p.nums = mp3.size();
+			p.dps = NULL;
+			if (p.nums > 0)
+			{
+				p.dps = new DrawPoint[p.nums];
+				for (int i = 0; i < p.nums; i++)
+				{
+					p.dps[i].x = mp3[i].x;
+					p.dps[i].y = mp3[i].y;
+					p.dps[i].z = mp3[i].z;
+				}
+			}
+
+			mpss.push_back(p);
+			ShowMps();
+		}
+
+		void CDrawPoint2D::SetDrawPTSRuningTime(DrawPts& pts)
+		{
+			DrawPts p(pts);
+			mpss.push_back(p);
+			ShowMps();
+		}
+
+		void CDrawPoint2D::SetPointsRuningTime(vector<DrawPoint>& pts, TypeColor tr)
 		{
 			DrawPts p(pts,POINTS_UNIT,tr);
 			
@@ -61,12 +87,12 @@ namespace My
 		
 		void CDrawPoint2D::ClearData()
 		{
-			h = 800;
+			m_h = 800;
 			
-			xmax = -DBL_MAX;
-			ymax = -DBL_MAX;
-			xmin = DBL_MAX;
-			ymin = DBL_MAX;
+			m_xmax = -DBL_MAX;
+			m_ymax = -DBL_MAX;
+			m_xmin = DBL_MAX;
+			m_ymin = DBL_MAX;
 			
 			mpss.clear();
 			// 	for (int i=0;i<mpss.size();i++)
@@ -97,36 +123,56 @@ namespace My
 			{
 				for (int j=0;j<mpss[i].nums;j++)
 				{
-					if (xmax<mpss[i].dps[j].x)
+					if (mpss[i].col == TYPE_AUTO)
 					{
-						xmax = mpss[i].dps[j].x;
+						if (m_zmax < mpss[i].dps[j].z)
+						{
+							m_zmax = mpss[i].dps[j].z;
+						}
+						if (m_zmin > mpss[i].dps[j].z)
+						{
+							m_zmin = mpss[i].dps[j].z;
+						}
 					}
-					if (xmin>mpss[i].dps[j].x)
+
+
+					if (m_xmax<mpss[i].dps[j].x)
 					{
-						xmin = mpss[i].dps[j].x;
+						m_xmax = mpss[i].dps[j].x;
 					}
-					if (ymax<mpss[i].dps[j].y)
+					if (m_xmin>mpss[i].dps[j].x)
 					{
-						ymax = mpss[i].dps[j].y;
+						m_xmin = mpss[i].dps[j].x;
 					}
-					if (ymin>mpss[i].dps[j].y)
+					if (m_ymax<mpss[i].dps[j].y)
 					{
-						ymin = mpss[i].dps[j].y;
+						m_ymax = mpss[i].dps[j].y;
+					}
+					if (m_ymin>mpss[i].dps[j].y)
+					{
+						m_ymin = mpss[i].dps[j].y;
 					}
 				}
 				
 			}
-			double diffx = xmax-xmin;
-			double diffy = ymax-ymin;
+			double diffx = m_xmax-m_xmin;
+			double diffy = m_ymax-m_ymin;
+			
 			if (diffx>0&&diffy>0)
 			{
-				w = (int)floor(h*diffx/diffy);
-				if (w>1500)
+				int tmpw = (int)floor(m_h*diffx/diffy);
+				
+				
+				if (m_showmode == MODE_INCRES && tmpw > m_w)
+					m_w = tmpw;
+				else
+					m_w = tmpw;
+				if (m_w>1500)
 				{
-					w=1500;
+					m_w=1500;
 				}
-				steph = diffy/h;
-				stepw = diffx/w;
+				m_steph = diffy/m_h;
+				m_stepw = diffx/m_w;
 				
 			}
 			else
@@ -163,11 +209,11 @@ namespace My
 		
 		void CDrawPoint2D::DrawMat(const char* path)
 		{
-			if (w<=0)
+			if (m_w<=0)
 			{
 				return;
 			}
-			Mat img = Mat::zeros(h,w,CV_8UC3);
+			Mat img = Mat::zeros(m_h,m_w,CV_8UC3);
 			
 			int textPos = 0;
 			
@@ -182,29 +228,56 @@ namespace My
 				{
 					for (int j=0;j<mpss[i].nums-1;j++)
 					{
-						int x1 = (int)floor((mpss[i].dps[j].x-xmin)/stepw);
-						int x2 = (int)floor((mpss[i].dps[j+1].x-xmin)/stepw);
-						int y1 = (int)floor((mpss[i].dps[j].y-ymin)/steph);
-						int y2 = (int)floor((mpss[i].dps[j+1].y-ymin)/steph);
-						x1 = MIN(MAX(x1,0),w-1);
-						x2 = MIN(MAX(x2,0),w-1);
-						y1 = MIN(MAX(y1,0),h-1);
-						y2 = MIN(MAX(y2,0),h-1);
+						int x1 = (int)floor((mpss[i].dps[j].x-m_xmin)/m_stepw);
+						int x2 = (int)floor((mpss[i].dps[j+1].x-m_xmin)/m_stepw);
+						int y1 = (int)floor((mpss[i].dps[j].y-m_ymin)/m_steph);
+						int y2 = (int)floor((mpss[i].dps[j+1].y-m_ymin)/m_steph);
+						x1 = MIN(MAX(x1,0),m_w-1);
+						x2 = MIN(MAX(x2,0),m_w-1);
+						y1 = MIN(MAX(y1,0),m_h-1);
+						y2 = MIN(MAX(y2,0),m_h-1);
 						line(img,Point(x1,y1),Point(x2,y2),GetColor(mpss[i].col),1);
 					}
 				}
 				
 				if(POINTS_UNIT == mpss[i].typ)
 				{
-					Scalar c = GetColor(mpss[i].col);
-					for (int j=0;j<mpss[i].nums;j++)
+					if (mpss[i].col == TYPE_AUTO)
 					{
-						int x = (int)floor((mpss[i].dps[j].x-xmin)/stepw);
-						int y = (int)floor((mpss[i].dps[j].y-ymin)/steph);
-						x = MIN(MAX(x,0),w-1);
-						y = MIN(MAX(y,0),h-1);
-						img.at<Vec3b>(y,x) = Vec3b(c.val[0],c.val[1],c.val[2]);
-						//circle(img,Point(x,y),1,GetColor(mpss[i].col));
+						double diffz = m_zmax - m_zmin;
+						for (int j = 0; j < mpss[i].nums; j++)
+						{
+							int x = (int)floor((mpss[i].dps[j].x - m_xmin) / m_stepw);
+							int y = (int)floor((mpss[i].dps[j].y - m_ymin) / m_steph);
+							x = MIN(MAX(x, 0), m_w - 1);
+							y = MIN(MAX(y, 0), m_h - 1);
+
+							if (diffz > 0)
+							{
+								double zz = (mpss[i].dps[j].z - m_zmin)/diffz;
+								int ca = (int)floor(255.*zz);
+								int cb = 255 - ca;
+								img.at<Vec3b>(y, x) = Vec3b(uchar(cb),uchar(80),uchar(ca));
+
+							}
+							else
+								img.at<Vec3b>(y, x) = Vec3b(255,255,255);
+							//circle(img,Point(x,y),1,GetColor(mpss[i].col));
+						}
+					}
+					else
+					{
+						Scalar c = GetColor(mpss[i].col);
+						for (int j = 0; j < mpss[i].nums; j++)
+						{
+							int x = (int)floor((mpss[i].dps[j].x - m_xmin) / m_stepw);
+							int y = (int)floor((mpss[i].dps[j].y - m_ymin) / m_steph);
+							x = MIN(MAX(x, 0), m_w - 1);
+							y = MIN(MAX(y, 0), m_h - 1);
+
+							img.at<Vec3b>(y, x) = Vec3b(c.val[0], c.val[1], c.val[2]);
+							//circle(img,Point(x,y),1,GetColor(mpss[i].col));
+						}
 					}
 				}
 				
@@ -212,10 +285,10 @@ namespace My
 				{
 					for (int j=0;j<mpss[i].nums;j++)
 					{
-						int x = (int)floor((mpss[i].dps[j].x-xmin)/stepw);
-						int y = (int)floor((mpss[i].dps[j].y-ymin)/steph);
-						x = MIN(MAX(x,0),w-1);
-						y = MIN(MAX(y,0),h-1);
+						int x = (int)floor((mpss[i].dps[j].x-m_xmin)/m_stepw);
+						int y = (int)floor((mpss[i].dps[j].y-m_ymin)/m_steph);
+						x = MIN(MAX(x,0),m_w-1);
+						y = MIN(MAX(y,0),m_h-1);
 						circle(img,Point(x,y),4,GetColor(mpss[i].col));
 					}
 				}
@@ -262,6 +335,102 @@ namespace My
 		void CDrawPoint2D::WriteImg( const char* path )
 		{
 			ShowMps(path);
+		}
+
+
+		DrawPts::DrawPts(const DrawPts& dp)
+		{
+			col = dp.col;
+			typ = dp.typ;
+			nums = dp.nums;
+			str = dp.str;
+
+			dps = NULL;
+			if (nums > 0)
+			{
+				dps = new DrawPoint[nums];
+				for (int i = 0; i < nums; i++)
+				{
+					dps[i] = dp.dps[i];
+				}
+			}
+		}
+
+		DrawPts::DrawPts(vector<DrawPoint>& pts)
+		{
+			col = TYPES_WHITE;
+			typ = POINTS_UNIT;
+			nums = pts.size();
+
+			dps = NULL;
+			if (nums > 0)
+			{
+				dps = new DrawPoint[nums];
+				for (int i = 0; i < nums; i++)
+				{
+					dps[i] = pts[i];
+				}
+			}
+		}
+
+		DrawPts::DrawPts(vector<DrawPoint>& pts, PointTypeUnit type)
+		{
+			col = TYPES_WHITE;
+			typ = type;
+			nums = pts.size();
+
+			dps = NULL;
+			if (nums > 0)
+			{
+				dps = new DrawPoint[nums];
+				for (int i = 0; i < nums; i++)
+				{
+					dps[i] = pts[i];
+				}
+			}
+		}
+
+		DrawPts::DrawPts(vector<DrawPoint>& pts, PointTypeUnit type, TypeColor tp)
+		{
+			typ = type;
+			col = tp;
+			nums = pts.size();
+
+			dps = NULL;
+			if (nums > 0)
+			{
+				dps = new DrawPoint[nums];
+				for (int i = 0; i < nums; i++)
+				{
+					dps[i] = pts[i];
+				}
+			}
+		}
+
+
+		DrawPts::DrawPts()
+		{
+			dps = NULL; nums = 0;
+		}
+
+		DrawPts::~DrawPts()
+		{
+			nums = 0;
+			if (dps)
+			{
+				delete[] dps;
+				dps = NULL;
+			}
+		}
+
+		void DrawPts::clearDate()
+		{
+			nums = 0;
+			if (dps)
+			{
+				delete[] dps;
+				dps = NULL;
+			}
 		}
 
 }
