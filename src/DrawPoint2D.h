@@ -3,6 +3,9 @@
 
 #include <vector>
 #include <string>
+
+#include "MapPoint3D.h"
+
 using namespace std;
 
 //用于测试的结构体，调用opencv绘图，仅供自己测试
@@ -19,7 +22,7 @@ namespace My
 		
 		enum PointTypeUnit{POINTS_UNIT,CIRCLES_UNIT,LINES_UNIT,TAGS_UNIT};
 		
-		enum TypeColor{TYPES_WHITE,TYPES_GREEN,TYPES_RED,TYPES_BLUE};
+		enum TypeColor{ TYPE_AUTO,TYPES_WHITE,TYPES_GREEN,TYPES_RED,TYPES_BLUE};
 		
 		class DrawPts
 		{
@@ -29,105 +32,24 @@ namespace My
 			int nums;
 			PointTypeUnit typ; 
 			TypeColor col;
-			DrawPts(){dps = NULL;nums = 0;}
+			DrawPts();
 			
-			~DrawPts()
-			{
-				nums = 0;
-				if (dps)
-				{
-					delete [] dps;
-					dps = NULL;
-				}
-			}
+			~DrawPts();
 			
-			inline void clearDate()
-			{
-				nums = 0;
-				if (dps)
-				{
-					delete [] dps;
-					dps = NULL;
-				}
-			}
+			void clearDate();
 			
-			
-			DrawPts(const DrawPts& dp)
-			{
-				col = dp.col;
-				typ = dp.typ;
-				nums = dp.nums;
-				str  = dp.str;
-				
-				dps = NULL;
-				if (nums>0)
-				{
-					dps = new DrawPoint[nums];
-					for (int i=0;i<nums;i++)
-					{
-						dps[i] = dp.dps[i];
-					}
-				}
-				
-			}
-			DrawPts(vector<DrawPoint>& pts)
-			{
-				col = TYPES_WHITE;
-				typ = POINTS_UNIT;
-				nums = pts.size();
-				
-				dps = NULL;
-				if (nums>0)
-				{
-					dps = new DrawPoint[nums];
-					for (int i=0;i<nums;i++)
-					{
-						dps[i] = pts[i];
-					}
-				}
-				
-			}
-			
-			DrawPts(vector<DrawPoint>& pts,PointTypeUnit type)
-			{
-				col = TYPES_WHITE;
-				typ = type;
-				nums = pts.size();
-				
-				dps = NULL;
-				if (nums>0)
-				{
-					dps = new DrawPoint[nums];
-					for (int i=0;i<nums;i++)
-					{
-						dps[i] = pts[i];
-					}
-				}
-				
-			}
-			DrawPts(vector<DrawPoint>& pts,PointTypeUnit type,TypeColor tp)
-			{
-				typ = type;
-				col = tp;
-				nums = pts.size();
-				
-				dps = NULL;
-				if (nums>0)
-				{
-					dps = new DrawPoint[nums];
-					for (int i=0;i<nums;i++)
-					{
-						dps[i] = pts[i];
-					}
-				}
-				
-			}
+			DrawPts(const DrawPts& dp);
+			DrawPts(vector<DrawPoint>& pts);
+			DrawPts(vector<DrawPoint>& pts,PointTypeUnit type);
+			DrawPts(vector<DrawPoint>& pts,PointTypeUnit type,TypeColor tp);
+
 			
 		};
 		
 		// 此类是从 DrawPoint2D.dll 导出的
 		class  CDrawPoint2D {
 		public:
+			enum MODE_SHOW{	MODE_AUTO,MODE_INCRES};
 			CDrawPoint2D(void);
 			
 			CDrawPoint2D(char* title);
@@ -140,6 +62,10 @@ namespace My
 				// 		}
 				//		m_ImgTitle.clear();
 			}
+
+			void SetMapPoint3RuningTime(map3d::MapPoint3D& mp3, PointTypeUnit type = POINTS_UNIT, TypeColor tp = TYPE_AUTO);
+
+			void SetDrawPTSRuningTime(DrawPts& pts);
 			
 			void SetPointsRuningTime(vector<DrawPoint>& pts,TypeColor tr=TYPES_WHITE);
 			
@@ -168,16 +94,18 @@ namespace My
 			void DrawMat(const char* path=NULL);
 			
 		private:
-			int w,h;//图像宽高
+			int m_w,m_h;//图像宽高
 			
 			vector<DrawPts> mpss;
 			
-			double xmax,ymax,xmin,ymin;
+			double m_xmax,m_ymax,m_xmin,m_ymin;
+			double m_zmax, m_zmin;
 			
-			double stepw,steph;//每个像素的距离
+			double m_stepw,m_steph;//每个像素的距离
 			
 			string m_ImgTitle;
 			
+			MODE_SHOW m_showmode;
 			
 		};
 		
