@@ -22,16 +22,24 @@ using namespace std;
 
 #define mpath "E://data//cartodata//"
 #else
-#define mpath "/mnt/hgfs/E/data/cartodata/"
+#define mpath "/mnt/hgfs/D/work/program/Cartographer/cartographer/test4/"
 #endif // WIN32
 
 
 int main (int argc, char** argv)
 {
 	MapPoint3D pt;
-	fstream fd((string(mpath)+string("1.txt")).c_str());
+	//fstream fd((string(mpath)+string("sweep0.txt")).c_str());
 	string tmp;
 	MapPoints3D mp;
+	
+	fstream fd;
+	
+	pt.ReadXYZ((string(mpath)+string("sweep0.txt")).c_str(),1);
+	
+	mp.SetOnePatch(pt);
+	mp.Show();
+	boost::this_thread::sleep (boost::posix_time::microseconds (1000000000));
 	
 	
 	while(true)
@@ -57,7 +65,7 @@ int main (int argc, char** argv)
 			cout<<"error open"<<endl;
 		fdd.close();
 		pt.clear();
-		pt.ReadXYZ(path.c_str());
+		pt.ReadXYZ(path.c_str(),1);
 		
 		mp.SetOnePatch(pt);
 		mp.Show();
