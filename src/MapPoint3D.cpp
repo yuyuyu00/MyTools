@@ -35,18 +35,20 @@ namespace My
 		{
 			m_filetype = type;
 			
-			char* buf = GetFileBuf(path);
+			//char* buf = GetFileBuf(path);
+			fstream fd(path);
 			
-			if(buf==NULL)
+			if(!fd)
 				return false;
 			
 			int index=0;
 			
 			PointType3D pt;
-			
 			for(;;)
 			{
-				string tmp =  BufGetLine(buf,index);
+				string tmp;
+				getline(fd, tmp);
+				//string tmp =  BufGetLine(buf,index);
 				if(tmp=="")
 					break;
 				stringstream ss(tmp);
@@ -56,6 +58,8 @@ namespace My
 					ss>>pt.x>>pt.y>>pt.z;
 				else if(m_filetype==1)
 				{
+					if (tmp == "\n")
+						break;
 					long long tm=0;
 					sscanf(tmp.c_str(),",%lld, %f, %f, %f",&tm,&pt.x,&pt.y,&pt.z);
 					
@@ -66,7 +70,7 @@ namespace My
 				
 				this->push_back(pt);
 			}
-			delete buf;
+			//delete buf;
 			
 			return true;
 		}
