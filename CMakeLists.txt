@@ -35,7 +35,7 @@ ENDFOREACH(S)
 
 #测试程序
 #add_executable(tst1 "src/test_orgdata.cc" )
-#add_executable(tst2 "src/test_mappoint3d.cc"  )
+add_executable(tst2 "src/test_mappoint3d.cc"  )
 
 #静态库生成
 ADD_LIBRARY(MyTools STATIC ${LIBSRCS})
@@ -55,7 +55,7 @@ include_directories(${OPENCV_INCLUDE_DIRS})
 include_directories(${PCL_INCLUDE_DIRS})
 #message("current---"  ${OPENCV_LIBS} )
 #target_link_libraries(tst1 ${OpenCV_LIBS} ${PCL_LIBRARIES})
-#target_link_libraries(tst2 ${OpenCV_LIBS} ${PCL_LIBRARIES})
+target_link_libraries(tst2 ${OpenCV_LIBS} ${PCL_LIBRARIES} MyTools)
 
 #设置config-CMAKE
 #message(${OpenCV_DIR})
