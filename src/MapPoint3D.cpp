@@ -44,7 +44,7 @@ namespace My
 			int index=0;
 			
 			PointType3D pt;
-			for(;;)
+			for(int i=0;;i++)
 			{
 				string tmp;
 				getline(fd, tmp);
@@ -53,28 +53,65 @@ namespace My
 					break;
 				stringstream ss(tmp);
 				
-				
-				if(m_filetype==0)
-					ss>>pt.x>>pt.y>>pt.z;
+				long long tm = 0;
+
+				if (m_filetype == 0)
+				{
+					ss >> pt.x >> pt.y >> pt.z;
+					this->push_back(pt);
+				}
 				else if(m_filetype==1)
 				{
 					if (tmp == "\n")
 						break;
-					long long tm=0;
 					sscanf(tmp.c_str(),",%lld, %f, %f, %f",&tm,&pt.x,&pt.y,&pt.z);
 					
-					m_tm = double(tm)/10000000.;
+					if (i == 0)
+					{
+						if (tm>100)
+							m_lasertype = 100;
+						else
+							m_lasertype = (int)tm;
+
+					}
+					else
+					{
+						m_tm = double(tm) / 10000000.;
+						this->push_back(pt);
+					}
+
 				}
 				
 				
-				
-				this->push_back(pt);
 			}
 			//delete buf;
 			
 			return true;
 		}
 		
+		bool MapPoint3D::Push(float x, float y, float z)
+		{
+
+			this->push_back(pcl::PointXYZ(x, y, z));
+			return true;
+		}
+
+		bool MapPoint3D::WriteXYZ(const char * path,int type)
+		{
+			ofstream fd(path);
+			if (!fd)
+			{
+				return false;
+			}
+			for (int i=0;i<size();i++)
+			{
+				fd << (*this)[i].x << " " << (*this)[i].y << " " << (*this)[i].z << endl;
+			}
+			fd.close();
+		}
+
+
+
 		MapPoints3D::MapPoints3D()
 		{
 			initView();

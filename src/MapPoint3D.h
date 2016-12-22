@@ -30,13 +30,16 @@ namespace My
 			MapPoint3D(const MapPoint3D& p);
 			
 			
-			bool ReadXYZ(const char* path,int type=0);
-			
+			bool WriteXYZ(const char * path, int type = 0);
+			bool ReadXYZ(const char* path, int type = 0);
+			bool Push(float x, float y, float z);
+			bool Push(double x, double y, double z) { return Push((float)x, (float)y, (float)z); };
 			
 		public:
 			double m_tm;
 			int m_id;
 			int m_filetype;
+			int m_lasertype;//激光器类型： 0.谷歌背包竖向激光， 1.谷歌背包横向激光，  
 		};
 
 
